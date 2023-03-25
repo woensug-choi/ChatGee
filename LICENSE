@@ -2,7 +2,7 @@
 title: BSD 4-Clause "Original" or "Old" License
 spdx-id: BSD-4-Clause
 
-description: A permissive license similar to the <a href="/licenses/bsd-3-clause/">BSD 3-Clause License</a>, but with an "advertising clause" that requires an acknowledgment of the original source in all advertising material. BSD 3-Caluse 라이센스와 유사합니다만 본 라이브러리를 이용해 프로그램, 서비스, 광고물 제작 시, 본 라이브러리 이름 또는 상표를 포함시키고 출처를 밝혀야 합니다. Woen-Sug Choi, 챗지, ChatGee는 동일한 명시효력을 가집니다.
+description: A permissive license similar to the <a href="/licenses/bsd-3-clause/">BSD 3-Clause License</a>, but with an "advertising clause" that requires an acknowledgment of the original source in all advertising material.
 
 how: Create a text file (typically named LICENSE or LICENSE.txt) in the root of your source code and copy the text of the license into the file. Replace [year] with the current year and [fullname] with the name (or names) of the copyright holders. Replace [project] with the project organization, if any, that sponsors this work.
 
