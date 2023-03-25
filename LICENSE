@@ -1,3 +1,31 @@
+---
+title: BSD 4-Clause "Original" or "Old" License
+spdx-id: BSD-4-Clause
+
+description: A permissive license similar to the <a href="/licenses/bsd-3-clause/">BSD 3-Clause License</a>, but with an "advertising clause" that requires an acknowledgment of the original source in all advertising material.
+
+how: Create a text file (typically named LICENSE or LICENSE.txt) in the root of your source code and copy the text of the license into the file. Replace [year] with the current year and [fullname] with the name (or names) of the copyright holders. Replace [project] with the project organization, if any, that sponsors this work.
+
+using:
+  Choco-solver: https://github.com/chocoteam/choco-solver/blob/master/LICENSE
+  PMSPAUR-public: https://github.com/ArthurGodet/PMSPAUR-public/blob/master/LICENSE
+  Switchblade: https://github.com/SwitchbladeBot/switchblade/blob/dev/LICENSE
+
+permissions:
+  - commercial-use
+  - modifications
+  - distribution
+  - private-use
+
+conditions:
+  - include-copyright
+
+limitations:
+  - liability
+  - warranty
+
+---
+
 BSD 4-Clause License
 
 Copyright (c) 2023, Woen-Sug Choi (ChatGee, 챗지)
