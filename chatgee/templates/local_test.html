@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Local Test</title>
+    <style>
+      /* CSS for the input box */
+      #question {
+        width: 100%;
+        font-size: 18px;
+        font-family: sans-serif;
+        height: 3em;
+        resize: none;
+        overflow: auto;
+      }
+      
+      /* CSS for the Submit button */
+      #submit-btn {
+        display: block;
+        margin: 0 auto;
+        font-size: 18px;
+        font-family: sans-serif;
+      }
+    </style>
+    <script>
+      function validateForm(event) {
+        var input = document.getElementById("question").value;
+        if (input.trim() === "") {
+          event.preventDefault();
+          alert("Please enter a question.");
+          return false;
+        }
+        return true;
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Local Query Test</h1>
+    <form method="post" action="{{ url_for('local_query') }}" onsubmit="return validateForm(event);">
+      <label for="question">Enter your question:</label><br>
+      <textarea id="question" name="question" rows="3" wrap="soft" onkeydown="if(event.keyCode==13){event.preventDefault(); document.getElementById('submit-btn').click();}"></textarea>
+      <br><br>
+      <input type="submit" id="submit-btn" value="Submit">
+    </form>
+    {% if time_elapsed %}
+    <h2>Response Time:</h2>
+    <p>{{ time_elapsed }} seconds</p>
+    {% endif %}
+    <div style="display: flex; justify-content: space-between;">
+      <div style="flex-basis: 48%; display: inline-block;">
+        {% if question %}
+        <h2>User Input:</h2>
+        <p>{{ question }}</p>
+        {% endif %}
+      </div>
+      <div style="flex-basis: 48%; display: inline-block; text-align: left;">
+        {% if answer %}
+        <h2>ChatBot Answers:</h2>
+        <p>{{ answer | safe }}</p>
+        {% endif %}
+      </div>
+    </div>
+  </body>
+</html>

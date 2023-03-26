@@ -1,0 +1,131 @@
+<!DOCTYPE HTML>
+<html>
+    
+<head>
+    <title>ChatGPT 챗봇 설정</title>
+    <meta name="description" content="ChatGPT 챗봇 설정" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, height=device-height" />
+    <!--[if lte IE 8]><script src="assets/js/html5shiv.js"></script><![endif]-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css') }}" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+    <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+    <noscript>
+        <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/noscript.css') }}" />
+    </noscript>
+
+    <meta property="og:type" content="website">
+    <!-- <meta property="og:title" content="ChatGPT 챗봇 설정"> -->
+    <meta property="og:description" content="ChatGPT 챗봇의 설정을 변경할 수 있는 화면입니다.">
+    <meta property="og:image" content="{{ url_for('static', filename='NEW_ICON.jpeg') }}">
+    <meta property="og:url" content="http://pf.kakao.com/_QZTDxj">
+</head>
+
+<body class="is-loading">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Main -->
+        <section id="main">
+            <header>
+                <span class="avatar"><img src="{{ url_for('static', filename='NEW_ICON.jpeg') }}" height="70" width="70" alt="" /></span>
+                <!-- <h1>ChatGPT 챗톡 설정</h1> -->
+            </header>
+
+            <!-- Body -->
+            <form method="POST" action="/settings/{{ userid }}">
+                <div class="chart-container">
+                    <canvas id="Usage_Chart"></canvas>
+                </div>
+            </form>
+
+        </section>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <ul class="copyright">
+                <li>&copy; ChatGPT 챗봇</li>
+                <li>E-Mail : <a href="mailto:talkchatgpt@gmail.com"
+                        target="_top">메일문의</a></li>
+            </ul>
+        </footer>
+
+    </div>
+
+    <!-- Scripts -->
+    <!--[if lte IE 8]><script src="assets/js/respond.min.js"></script><![endif]-->
+    <script>
+        if ('addEventListener' in window) {
+            window.addEventListener('load', function () { document.body.className = document.body.className.replace(/\bis-loading\b/, ''); });
+            document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
+        }
+    </script>
+    <!-- For bar graph -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
+    <!-- 버전이 2.x.x 가 Animation이되서 일부러 낮은거 사용 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.7.0"></script>  
+    <script>
+        var ctx = document.getElementById('Usage_Chart').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {{ chart_data | tojson }},
+            options: {
+                responsive: true, // make the chart responsive
+                maintainAspectRatio: false, // let the chart fill the container's dimensions
+                legend: {
+                    display: false // hides the legend
+                },
+                scales: {
+                    yAxes: [{
+                            ticks: {
+                                beginAtZero: true,
+                                stepSize: 100,
+                                maxTicksLimit: 4, // maximum number of ticks to show
+                            }}
+                    ],
+                    xAxes: [{
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Count'
+                        },
+                        ticks: {
+                            display: false // hides the x-axis labels
+                        },
+                        gridLines: {
+                            display: false // hides the x-axis grid lines
+                        },
+                        barPercentage: 0.6, // adjust the width of the bars on the y-axis
+                    }]
+                },
+                plugins: {
+                    datalabels: {
+                        color: 'rgba(255, 20, 147, 0.65)',
+                        anchor: 'end', // position the label at the end of the bar
+                        align: 'top', // position the label above the bar
+                        offset: 0, // adjust the distance between the label and the b
+                        font: {
+                            size: 25,
+                            family: 'Arial', // replace with your desired font family
+                            weight: 'bold',
+                        },
+                        formatter: function(value, context) {
+                            return value;
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+
+    <script>
+        var chartContainer = document.querySelector('.chart-container');
+        chartContainer.style.height = (window.innerHeight * 0.5) + 'px';
+        // chartContainer.style.width = (window.innerHeight * 0.25) + 'px';
+    </script>
+    
+
+	</body>
+</html>
