@@ -11,6 +11,8 @@
 - 카카오톡 채널이 요구하는 5초내 응답조건 대응
   - 5초 내 응답하지 못하면 '생각중'이라는 답을 우선 송신
   - 사용자가 다시 요청 시, DB에 저장된 답변을 송신
+- ChatGPTers의 AI 챗봇 개발실과 함께합니다
+  - [AI 챗봇 개발실 (ChatGPTers)](https://open.kakao.com/o/gECQhjbf)
 
 > 카카오톡 챗봇 등록에 시간이 최대 6일 소요됩니다. [채널 신설과 챗봇 등록](https://github.com/woensug-choi/ChatGee/tree/main/docs/kakao_channel)을 우선 수행해 두시기 바랍니다!
 
