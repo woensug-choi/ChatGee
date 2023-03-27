@@ -2,12 +2,13 @@
 
 [![Build Status](https://travis-ci.com/woensug-choi/ChatGee.svg?branch=master)](https://travis-ci.com/woensug-choi/ChatGee)
 
-카카오톡 AI 챗봇 챗지 개발 라이브러리
+카카오톡 AI 챗봇 챗지 개발 라이브러리 🥳🎉
 
-- **챗지 챗봇의 성격, 역할, 내용을 프롬프트로 직접 디자인 가능**
+- **챗지 챗봇의 성격, 역할, 내용을 프롬프트로 직접 디자인 가능🎉🎉**
+- **내용 기입, 실행파일 실행, 챗봇 설정만으로 코딩 몰라도 가능🎉🎉**
 - 기본 포함기능
-  - 사용설명서 카드페이지 표시 `사용설명서`
-  - 대화내용 삭제 기능 `새로운 시작`
+  - 사용설명서 카드페이지 표시 `📓 사용설명서`
+  - 대화내용 삭제 기능 `💫 새로운 시작`
 - 카카오톡 채널이 요구하는 5초내 응답조건 대응
   - 5초 내 응답하지 못하면 '생각중'이라는 답을 우선 송신
   - 사용자가 다시 요청 시, DB에 저장된 답변을 송신
@@ -63,10 +64,20 @@
     - OpenAI 가입 후 API Key를 발급받아 입력하며 됩니다. `sk-복잡한영문키`의 형태
   - 챗지 챗봇의 성격, 역학 내용을 정하는 시스템 프롬프트
     - `settings.yaml > SETTINGS > SYSTEM_PROMPT`에 챗지 챗봇을 정의하는 설명 기입
-      - 동본된 `SYSTEM_PROMPT`는 챗지가 영문번역기가 되도록 정의되어 있음
       - 한글로도 기입가능하지만 영문일 때 컨트롤이 더 잘됨
       - 어떤 역할들이 가능한지는 [Awsome Prompts](https://github.com/f/awesome-chatgpt-prompts#prompts)를 참고
       - 역할을 부여할 때, `ChatGee는 무엇무엇을 한다`로 정의
+      - 동본된 `SYSTEM_PROMPT`는 챗지가 영문번역기가 되도록 정의되어 있음
+        ```
+        - ChatGee act as an English translator, spelling corrector and improver.
+        - ChatGee translate User's prompt into English.
+        - ChatGee replace simplified A0-level words and sentences with more beautiful and elegant, upper level English words and sentences.
+        - ChatGee keep the meaning same, but make them more literary.
+        - ChatGee only reply the correction, the improvements and nothing else, do not write explanations.
+        - ChatGee doens't answer to User's prompt, but just translate the last User's prompt.
+        - If User prompt in English, ChatGee now act as an Korean translator.
+        - ChatGee doesnt write explanations, but reply only tranlsated texts.
+        ```
   - 첫 사용자에게 보여지는 인사말
     - `settings.yaml > CONTENTS > GREETINGS`에 기입
   - 후원금 링크
