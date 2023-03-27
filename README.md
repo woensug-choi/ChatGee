@@ -17,11 +17,10 @@
 > 5초 후 응답하려면 '광고'의 성격을 가지므로 15원이 소모
 
 # 개발 예제
-| 접속QR | 접속링크  |
-| --- | --- |
-| <img src="./docs/images/ChatGee_Main.png" alt="ChatGee_Main" width="100"> | [챗지 벤치마크](http://pf.kakao.com/_RxoCkxj/chat) |
-| <img src="./docs/images/ChatGee_Bible.png" alt="ChatGee_Bible" width="100"> | [챗지 성경공부](http://pf.kakao.com/_FmUkxj/chat) |
-| <img src="./docs/images/ChatGee_Travel.png" alt="ChatGee_Travel" width="100"> | [챗지 상품소개](http://pf.kakao.com/_BCjxmxj/chat) |
+
+| [챗지 벤치마크](http://pf.kakao.com/_RxoCkxj/chat) | [챗지 성경공부](http://pf.kakao.com/_FmUkxj/chat) | [챗지 상품소개](http://pf.kakao.com/_BCjxmxj/chat) | 
+| --- | --- | --- |
+| <img src="./docs/images/ChatGee_Main.png" alt="ChatGee_Main" width="100"> | <img src="./docs/images/ChatGee_Bible.png" alt="ChatGee_Bible" width="100"> | <img src="./docs/images/ChatGee_Travel.png" alt="ChatGee_Travel" width="100"> |
 
 # 설치방법
 
