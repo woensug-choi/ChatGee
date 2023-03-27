@@ -48,14 +48,11 @@ echo.
 echo (2/4) Run ChatGee Server
 start /b python chatgee/run_server.py > nul 2>&1
 
-@REM ----- Read Port Number and NGROK Auth Key from settings.yaml file
+@REM ----- Read Port Number from settings.yaml file
 echo.
 echo (3/4) Reading settings.yaml file...
 for /f "tokens=* USEBACKQ" %%F in (`.\yq.exe eval ".SERVER.PORT_NUMBER" settings.yaml`) do (
   set "port_number=%%F"
-)
-for /f "tokens=* USEBACKQ" %%F in (`.\yq.exe eval ".NGROK.AUTH_KEY" settings.yaml`) do (
-  set "ngrok_auth_key=%%F"
 )
 
 echo.
