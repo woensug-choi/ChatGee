@@ -99,7 +99,7 @@
     <img src="./docs/images/batch.jpg" alt="Batch 구동" width="350">
 
 #### 5. `/local_test` 에서 챗봇 응답내용 테스트
-- `ChatGee.bat` 실행에서 얻은 ``https://이상한영문.lhr.life/local_test`로 `local_test`로 끝나는 주소로 접속
+- `ChatGee.bat` 실행에서 얻은 `https://이상한영문.lhr.life/local_test`로 `local_test`로 끝나는 주소로 접속
 - 사용자가 입력할 내용을 빈칸에 입력 후 `Submit`을 클릭 또는 엔터를 입력하면, 응답소요시간, 응답내용을 확인 가능
 
 #### 6. 카카오톡 채널 신설 및 챗봇 등록
