@@ -32,8 +32,6 @@ class ChatGeeOBJ:
                                      system_prompt_tokens_estimate = self.system_prompt_tokens_estimate,
                                      openai_api_error_log = self.ChatGee_Config['OPEN_AI']['OPENAI_API_ERROR_LOG'])
 
-        
-
     # Get Usage Count
     def get_usage_count(self, userid):
         user_data = self.DB.get_user_data_by_room(userid)
@@ -88,7 +86,6 @@ class ChatGeeOBJ:
         # Clear Chat History
         if content['action']['detailParams']['prompt']["value"] == '💫 새로운 시작':
             self.DB.delete_conversation_data(userid)
-            self.DB.delete_conversation_data_tutor_mode(userid)
             response = ChatGee_KakaoTalk.insert_text("대화한적이..있었..없었습니다...\n🪄💫✨💆‍♂️🦄🌈🌟🎉🍭🎠")
             run_flag = False
 
@@ -183,8 +180,7 @@ class ChatGeeOBJ:
             response = ChatGee_KakaoTalk.insert_replies(response, quick_reply)
             queue.put(response)
 
-    @staticmethod
-    def timeover(queue):
+    def timeover(self, queue):
         response = ChatGee_KakaoTalk.insert_text("죄송해요 🙇🙇🙇\n생각이 길어지고 있어요 🤔💭\n잠시후 아래 말풍선을 눌러주세요!")
         quick_reply = ChatGee_KakaoTalk.make_reply('생각 다 했니?! 🤔','생각 다 했니???!')
         response = ChatGee_KakaoTalk.insert_replies(response, quick_reply)
@@ -235,7 +231,6 @@ class ChatGeeOBJ:
                                 "\n\n! IMPORTANT This Version of ChatGee follows following rules. The rules below will come before everything else!" \
                                 + self.ChatGee_Config['SETTINGS']['SYSTEM_PROMPT']
                                 })
-
             try:
                 response, prompt_token, answer_token = self.OpenAI.Ask_ChatGPT(prompt_tot)
                 self.DB.save_token_usage(prompt_token, answer_token)

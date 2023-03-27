@@ -7,10 +7,7 @@ from base.module_kakaotalk import ChatGee_KakaoTalk
 def generate_greetings(ChatGee_Config, content):
     response = ChatGee_KakaoTalk.insert_card(
         title=ChatGee_Config['CONTENTS']['GREETINGS']['TITLE'],
-        description=ChatGee_Config['CONTENTS']['GREETINGS']['TEXTS'],
-        image_url='http://' + ChatGee_Config['SERVER']['SERVICE_ADDRESS'] \
-                    + ':' + str(ChatGee_Config['SERVER']['PORT_NUMBER']) \
-                    + '/static/' + ChatGee_Config['CONTENTS']['GREETINGS']['IMAGE'])
+        description=ChatGee_Config['CONTENTS']['GREETINGS']['TEXTS'])
     try:
         content = content['action']['detailParams']['prompt']["value"]
         content = ''.join(str(e) for e in content)
@@ -25,10 +22,7 @@ def generate_greetings(ChatGee_Config, content):
 # Advertisement
 def generate_advertisement(ChatGee_Config, response):
     response = ChatGee_KakaoTalk.plus_card(response, title='', 
-                                description=ChatGee_Config['CONTENTS']['ADVERTISEMENT']['TEXTS'],
-                                image_url='http://' + ChatGee_Config['SERVER']['SERVICE_ADDRESS'] \
-                                        + ':' + str(ChatGee_Config['SERVER']['PORT_NUMBER']) \
-                                        + '/static/' + ChatGee_Config['CONTENTS']['ADVERTISEMENT']['IMAGE'])
+                                description=ChatGee_Config['CONTENTS']['ADVERTISEMENT']['TEXTS'])
     response = ChatGee_KakaoTalk.insert_button_url(response, '더알고 싶으시면 🚀', ChatGee_Config['CONTENTS']['ADVERTISEMENT']['LINK'])
     if len(ChatGee_Config['CONTENTS']['SUPPORT_LINK']) != 0:
         ChatGee_KakaoTalk.insert_button_url(response, '후원하기🧋🧋', ChatGee_Config['CONTENTS']['SUPPORT_LINK'])
@@ -40,14 +34,10 @@ def generate_documents(ChatGee_Config):
 
     response = ChatGee_KakaoTalk.insert_carousel_card(title = '📓 사용설명서 for 🌱🐤', 
                                     description = '아는만큼 잘 부려먹는 AI챗봇🥺\n이것만 보면 사용법은 완벽 😎👀',
-                                    image_url='http://' + ChatGee_Config['SERVER']['SERVICE_ADDRESS'] \
-                                            + ':' + str(ChatGee_Config['SERVER']['PORT_NUMBER']) \
-                                            + '/static/' + ChatGee_Config['CONTENTS']['EXPLAIN']['IMAGE'],
                                     width=30, height=None)
 
     response = ChatGee_KakaoTalk.plus_carousel_card(response, title = "", 
-                                    description = ChatGee_Config['CONTENTS']['EXPLAIN']['TEXTS'],
-                                    image_url=None, width=None, height=None)
+                                    description = ChatGee_Config['CONTENTS']['EXPLAIN']['TEXTS'])
     if len(ChatGee_Config['CONTENTS']['SUPPORT_LINK']) != 0:
         ChatGee_KakaoTalk.insert_carousel_button_url(response, '후원하기🧋🧋', ChatGee_Config['CONTENTS']['SUPPORT_LINK'])
 
@@ -80,7 +70,7 @@ def generate_documents(ChatGee_Config):
                                     '기반으로 만들어졌습니다!😊\n\n'
                                     '오픈소스로🧐 소스코드 공개!,'
                                     '가장 재밌는 AI챗봇이 되길\n'
-                                    '희망합니다✨✨✨'
+                                    '희망합니다✨✨✨\n'
                                     '문의사항 : talkchatgpt@지메일',
                                     image_url=None, width=None, height=None)
 

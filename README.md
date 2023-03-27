@@ -1,2 +1,4 @@
-# ChatGee
-KakaoTalk AI Chatbot Library
+# 챗지 AI 챗봇 
+카카오톡 AI 챗봇 라이브러리 입니다 :D
+
+

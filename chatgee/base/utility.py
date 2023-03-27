@@ -2,14 +2,23 @@
 
 import json
 import yaml
+import codecs
 
 def read_json(file_path):
     with open(file_path, "r") as f:
         return json.load(f)
 
 def read_yaml(file_path):
-    with open(file_path, "r") as f:
-        return yaml.safe_load(f)
+    with open(file_path, "rb") as f:
+        contents = f.read()
+        detected_encoding = codecs.BOM_UTF8.decode('utf-8')
+        try:
+            contents = contents.decode('utf-8')
+            detected_encoding = 'utf-8'
+        except UnicodeDecodeError:
+            contents = contents.decode('cp949')
+            detected_encoding = 'cp949'
+        return yaml.safe_load(contents)
 
 import requests
 import time

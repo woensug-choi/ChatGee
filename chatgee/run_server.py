@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 # ############################################### #
-CONFIG_FILE_PATH = "ChatGee_Config.yaml"
+CONFIG_FILE_PATH = "settings.yaml"
 # ############################################### #
 
 from flask import Flask, request, jsonify, render_template, url_for
@@ -9,13 +9,10 @@ from base.chatgee import ChatGeeOBJ
 from base.utility import read_yaml, send_query_local
 import time
 
-from flask_ngrok import run_with_ngrok
-
 # ---------------     Flask     ----------------- #
 app = Flask(__name__, static_url_path='/static')
-run_with_ngrok(app)
 
-# -------------- Initiate Modules --------------- #
+# -------------- Initiate Modules,--------------- #
 # Read Config File
 ChatGee_Config = read_yaml(CONFIG_FILE_PATH)
 # Initiate ChatGee Library
@@ -52,24 +49,27 @@ def usage_count(userid):
 # Send Dummy Route
 @app.route("/local_test", methods=["GET", "POST"])
 def local_query():
+    system_prompt = ChatGee_Config['SETTINGS']['SYSTEM_PROMPT']
+    print(system_prompt)
     # If the form has been submitted
     if request.method == "POST":
         query = request.form["question"]
         if query:
             start_time = time.time()
             response = send_query_local(query, ChatGee_Config)
+            answer = ""
             if response != None:
-                answer = send_query_local(query, ChatGee_Config).replace('\n', '<br>')
+                answer = response.replace('\n', '<br>')
             return render_template("local_test.html",
                     question=query, answer=answer,
-                    time_elapsed=round((time.time() - start_time), 2))
+                    time_elapsed=round((time.time() - start_time), 2),
+                    system_prompt=system_prompt)
     else:
         # Render the local_test HTML template without any question or answer
         return render_template("local_test.html")
 
 if __name__ == "__main__":
-    app.run()
-    # app.run(host=ChatGee_Config['SERVER']['HOST_NAME'],
-    #         port=ChatGee_Config['SERVER']['PORT_NUMBER'],
-    #         debug=ChatGee_Config['SERVER']['DEBUG_FLASK'],
-    #         extra_files=[CONFIG_FILE_PATH])
+    app.run(host=ChatGee_Config['SERVER']['HOST_NAME'],
+            port=ChatGee_Config['SERVER']['PORT_NUMBER'],
+            debug=ChatGee_Config['SERVER']['DEBUG_FLASK'],
+            extra_files=[CONFIG_FILE_PATH])

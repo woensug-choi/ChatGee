@@ -16,4 +16,5 @@ static/user_image/
 build
 dist
 *.spec
+tunnel_output.txt
 
