@@ -17,11 +17,11 @@
 > 5초 후 응답하려면 '광고'의 성격을 가지므로 15원이 소모
 
 # 개발 예제
-| 접속QR | 접속링크  |  |
-| --- | --- | --- |
-| ![ChatGee_Main](./docs/images/ChatGee_Main.png) | [챗지 벤치마크](http://pf.kakao.com/_RxoCkxj/chat) |  |
-| ![ChatGee_Bible](./docs/images/ChatGee_Bible.png) | [챗지 성경공부](http://pf.kakao.com/_FmUkxj/chat) |  |
-| ![ChatGee_Travel](./docs/images/ChatGee_Travel.png) | [챗지 상품소개](http://pf.kakao.com/_BCjxmxj/chat) |  |
+| 접속QR | 접속링크  |
+| --- | --- |
+| <img src="./docs/images/ChatGee_Main.png" alt="ChatGee_Main" width="100"> | [챗지 벤치마크](http://pf.kakao.com/_RxoCkxj/chat) |
+| <img src="./docs/images/ChatGee_Bible.png" alt="ChatGee_Bible" width="100"> | [챗지 성경공부](http://pf.kakao.com/_FmUkxj/chat) |
+| <img src="./docs/images/ChatGee_Travel.png" alt="ChatGee_Travel" width="100"> | [챗지 상품소개](http://pf.kakao.com/_BCjxmxj/chat) |
 
 # 설치방법
 
@@ -52,7 +52,8 @@
 #### 2. 파이썬 설치
 - 동봉된 `python-3.10.10.exe` 또는 직접 파이썬 홈페이지에서 3.10.10 설치파일을 받아 설치
 - (주의사항!!) 아래 스크린샷과 같이 아래 `Add python.exe to PATH` 클릭 필수!
-  ![파이썬 설치화면](./docs/images/python1.jpg)
+
+  <img src="./docs/images/python1.jpg" alt="파이썬 설치화면" width="350">
 
 #### 3. `Settings.yaml` 설정
 - 필수 설정 항목
@@ -93,7 +94,8 @@
   - Python 및 필요 라이브러리 설치확인
   - ChatGee 서버 구동 (Flask)
   - Localhost.run를 이용한 서버 고정주소 자동 발급 
-  ![파이썬 설치화면](./docs/images/batch.jpg)
+  
+    <img src="./docs/images/batch.jpg" alt="Batch 구동" width="350">
 
 #### 5. `/local_test` 에서 챗봇 응답내용 테스트
 - `ChatGee.bat` 실행에서 얻은 ``https://이상한영문.lhr.life/local_test`로 `local_test`로 끝나는 주소로 접속
