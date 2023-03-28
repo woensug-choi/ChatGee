@@ -95,6 +95,7 @@
 
 #### 4. `ChatGee.bat` 실행
 - ChatGee의 소스코드에서 `ChatGee.bat`을 더블클릭으로 실행
+  - 뭔가 이상하면 창을 종료하고 다시 실행 
 - 실행이 완료되면, Localhost.run이 발급한 주소로 접속
 - `https://이상한영문.lhr.life`
   - 챗지 챗봇의 기본 서버 주소
