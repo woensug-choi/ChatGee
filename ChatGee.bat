@@ -91,6 +91,9 @@ if not defined serveo_addr (
   echo.
   echo To test at local machine,
   echo Goto %serveo_addr%/local_test
+  echo Or http://localhost:%port_number%/local_test
+  echo.
+  echo If none of above works, it could be firewall problem
   echo.
   echo Change settings.yaml for system prompts and other settings.
 )
