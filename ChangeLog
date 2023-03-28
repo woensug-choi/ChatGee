@@ -1,3 +1,12 @@
+## [0.2] - 2023-03-28
+
+### Added
+- None
+
+### Changed
+- settings.yaml : Change Default Flask port to 6959
+- README.md : explain about new port and for cases localhost.run didn't work
+
 ## [0.1] - 2023-03-28
 
 ### Added
