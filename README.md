@@ -21,9 +21,14 @@
 사용설명서 바로가기 : [📖 ChatGee 사용설명서](https://woensug-choi.github.io/ChatGee_Doc/jekyll/Introduction.html)
 
 
+
+---
 ### License
 
 This work is open sourced under the `BSD 4-Clause "Original" or "Old" License`.
+
 상업적 사용 가능, 수정, 배포 가능, 저작권 표기 필수
+
 본 ChatGee 라이브러리가 사용되었음을 모든 광고물 및 수정, 배포, 상업판에 표기 필수
+
 Copyright 2023 [ChatGee; Woen-Sug Choi](https://woensug-choi.github.io)
