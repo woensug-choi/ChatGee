@@ -107,6 +107,8 @@
   - Python 및 필요 라이브러리 설치확인
   - ChatGee 서버 구동 (Flask)
   - Localhost.run를 이용한 서버 고정주소 자동 발급 
+- 마지막에 localhost.run 주소가 나오지 않는다면, localhost.run 서버의 문제일 수 있음
+  - 브라우저에서 `localhost:6959/local_test`에 접속해서 테스트 (6059는 settings.yaml에서 바꾸지 않았다면 기본포트)
   
     <img src="./docs/images/batch.jpg" alt="Batch 구동" width="350">
 
