@@ -16,9 +16,9 @@
 - ChatGPTers의 AI 챗봇 개발실과 함께합니다
   - [AI 챗봇 개발실 (ChatGPTers)](https://open.kakao.com/o/gECQhjbf)
 
-# ChatGee 사용설명서
+# 📖 ChatGee 사용설명서
 
-사용설명서 바로가기 : [ChatGee 사용설명서](https://woensug-choi.github.io/ChatGee_Doc/jekyll/Introduction.html)
+사용설명서 바로가기 : [📖 ChatGee 사용설명서](https://woensug-choi.github.io/ChatGee_Doc/jekyll/Introduction.html)
 
 
 ### License
