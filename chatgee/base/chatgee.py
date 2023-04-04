@@ -168,12 +168,7 @@ class ChatGeeOBJ:
             else:
                 response = ChatGee_KakaoTalk.insert_text(response)
             queue.put(response)
-        
-        elif response == 'Search Error':
-            response = ChatGee_KakaoTalk.insert_text('네이버검색서버가 오류메세지를 보냈어요 🙇')
-            quick_reply = ChatGee_KakaoTalk.make_reply('다시 물어보기 ✍🏻', content)
-            response = ChatGee_KakaoTalk.insert_replies(response, quick_reply)
-            queue.put(response)
+            
         else:
             response = ChatGee_KakaoTalk.insert_text('OpenAI서버가 오류메세지를 보냈어요 🙇')
             quick_reply = ChatGee_KakaoTalk.make_reply('다시 물어보기 ✍🏻', content)
