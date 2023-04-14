@@ -17,8 +17,6 @@ class ChatGee_DB:
         self.chat_db_name = db_prefix + "_Chat.db"
         self.token_db_name = db_prefix + "_Tokens.db"
 
-        print("\n# --- ChatGee Database")
-
         # User databasse
         if os.path.isfile(self.user_db_name):
             print("ChatGee DB : User Database exists!")

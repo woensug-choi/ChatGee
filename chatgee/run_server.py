@@ -50,7 +50,7 @@ def usage_count(userid):
 @app.route("/local_test", methods=["GET", "POST"])
 def local_query():
     system_prompt = ChatGee_Config['SETTINGS']['SYSTEM_PROMPT']
-    print(system_prompt)
+    
     # If the form has been submitted
     if request.method == "POST":
         query = request.form["question"]
