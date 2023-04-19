@@ -10,7 +10,7 @@ echo
 echo 
 echo "========== ChatGee AI Chatbot =========="
 
-for python in `where python3.10`
+for python in `which python3.10`
 do
     var=`$python --version 2>&1`
     parts=(${(@s:.:)var})
