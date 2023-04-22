@@ -1,7 +1,5 @@
 # ChatGee 챗지 AI 챗봇 빌더
 
-[![Build Status](https://travis-ci.com/woensug-choi/ChatGee.svg?branch=master)](https://travis-ci.com/woensug-choi/ChatGee)
-
 카카오톡 AI 챗봇 챗지 빌더 🥳🎉
 
 - **챗지 챗봇의 성격, 역할, 내용을 프롬프트로 직접 디자인 가능🎉🎉**
