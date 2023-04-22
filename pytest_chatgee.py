@@ -1,18 +1,22 @@
-import pytest
-
+"""Pytest for ChatGee Server Root"""
 
 import sys
-sys.path.insert(0, 'chatgee/')
+
+from unittest.mock import MagicMock
+import pytest
 
 from chatgee.run_server import app
-from unittest.mock import MagicMock
+
+sys.path.insert(0, 'chatgee/')
 
 @pytest.fixture
 def client():
-    with app.test_client() as client:
-        yield client
+    """Create a test client for the app"""
+    with app.test_client() as app_client:
+        yield app_client
 
-def test_prompt(client):
+def test_prompt(app_client):
+    """Test the '/prompt' route"""
     # Mock the ChatGeeOBJ class
     ChatGeeOBJ_mock = MagicMock()
 
@@ -59,8 +63,8 @@ def test_prompt(client):
                 }
             }
         }
-    
-    response = client.post("/prompt", json=test_json)
+
+    response = app_client.post("/prompt", json=test_json)
 
     # Verify that the response is as expected
     assert response.status_code == 200

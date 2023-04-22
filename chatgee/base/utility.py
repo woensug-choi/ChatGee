@@ -1,28 +1,27 @@
 # -*- coding: utf-8 -*-
+"""Utility for ChatGee Library"""
 
 import json
 import yaml
-import codecs
+import requests
 
 def read_json(file_path):
-    with open(file_path, "r") as f:
+    """Read JSON file"""
+    with open(file_path, "r", encoding="utf-8") as f:
         return json.load(f)
 
 def read_yaml(file_path):
+    """Read YAML file"""
     with open(file_path, "rb") as f:
         contents = f.read()
-        detected_encoding = codecs.BOM_UTF8.decode('utf-8')
         try:
             contents = contents.decode('utf-8')
-            detected_encoding = 'utf-8'
         except UnicodeDecodeError:
             contents = contents.decode('cp949')
-            detected_encoding = 'cp949'
         return yaml.safe_load(contents)
 
-import requests
-import time
 def send_query_local(query, ChatGee_Config):
+    """Send query to local server"""
 
     # Define the JSON data
     data = {
@@ -61,17 +60,17 @@ def send_query_local(query, ChatGee_Config):
                 'name': '폴백 블록'
             },
             'user': {
-                'id': '3efb9a2e72368e6de7bda1960ae7c79c0b61bebac9c9f467ba621e9d5ae644f9b2',
+                'id': '3efb9a2e72368e6de7bda1960ae7',
                 'type': 'botUserKey',
                 'properties': {
-                    'botUserKey': '3efb9a2e72368e6de7bda1960ae7c79c0b61bebac9c9f467ba621e9d5ae644f9b2',
+                    'botUserKey': '3efb9a2e72368e6de7bda1960ae7',
                     'isFriend': True,
                     'plusfriendUserKey': 'Hr9Qhm9PRazi',
-                    'bot_user_key': '3efb9a2e72368e6de7bda1960ae7c79c0b61bebac9c9f467ba621e9d5ae644f9b2',
+                    'bot_user_key': '3efb9a2e72368e6de7bda1960ae7',
                     'plusfriend_user_key': 'Hr9Qhm9PRazi'
                 }
             },
-            'utterance': 'ㅏ',
+            'utterance': 'Hello, 안녕!',
             'params': {
                 'surface': 'Kakaotalk.plusfriend'
             },
@@ -83,8 +82,8 @@ def send_query_local(query, ChatGee_Config):
 
     # Send the JSON data as a POST request
     url = 'http://localhost:' + str(ChatGee_Config['SERVER']['PORT_NUMBER']) + '/prompt'
-    response = requests.post(url, json=data)
+    response = requests.post(url, json=data, timeout=10)
     try:
         return json.loads(response.text)['template']['outputs'][0]['simpleText']['text']
-    except:
-        pass
+    except KeyError:
+        return ""

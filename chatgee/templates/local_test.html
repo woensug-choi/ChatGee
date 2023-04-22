@@ -45,7 +45,7 @@
     <form method="post" action="{{ url_for('local_query') }}" onsubmit="return validateForm(event);">
       <label for="question">Enter your question:</label><br>
       <textarea id="question" name="question" rows="3" wrap="soft" onkeydown="if(event.keyCode==13){event.preventDefault(); document.getElementById('submit-btn').click();}"></textarea>
-      지연응답에는 대응하지 않는 Local Test입니다! 짧게 대답가능한 것만 테스트해주세요. 지연응답은 카카오챗봇 연결 후 테스트하시면 됩니다.<br>
+      지연응답에는 대응하지 않는 Local Test입니다! 짧게 대답가능한 것만 테스트해주세요.<br>지연응답은 카카오챗봇 연결 후 테스트하시면 됩니다.<br>응답이 없을 경우, 다시 한번 더 시도해주세요!
       <br><br>
       <input type="submit" id="submit-btn" value="Submit">
     </form>
