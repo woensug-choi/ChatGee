@@ -1,21 +1,21 @@
 """Pytest for ChatGee Server Root"""
+# pylint: disable=C0413,W0621
 
 import sys
 
 from unittest.mock import MagicMock
 import pytest
+sys.path.insert(0, 'chatgee/')
 
 from chatgee.run_server import app
-
-sys.path.insert(0, 'chatgee/')
 
 @pytest.fixture
 def client():
     """Create a test client for the app"""
-    with app.test_client() as app_client:
-        yield app_client
+    with app.test_client() as client:
+        yield client
 
-def test_prompt(app_client):
+def test_prompt(client):
     """Test the '/prompt' route"""
     # Mock the ChatGeeOBJ class
     ChatGeeOBJ_mock = MagicMock()
@@ -64,7 +64,7 @@ def test_prompt(app_client):
             }
         }
 
-    response = app_client.post("/prompt", json=test_json)
+    response = client.post("/prompt", json=test_json)
 
     # Verify that the response is as expected
     assert response.status_code == 200
