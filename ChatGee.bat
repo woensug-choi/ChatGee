@@ -6,30 +6,35 @@ echo ========== ChatGee AI Chatbot ==========
 @REM ------- Install Python if not installed
 
 if exist venv_chatgee\Scripts\activate.bat (
-  echo File exists
-) else (
-  call:find_python 
-  call:check_python_exist
-  if "%python%" == "" (
-      pause
-      EXIT /B 0
-  )
+  goto :source_activate
+) 
 
-  call:find_pip
-
-  if "%pip_bin%" == "" (
-    %python% -m ensurepip --upgrade > nul 2>&1
-  ) else (
-    echo pip3 Installation Confirmed !
-  )
-
-  echo.
-  echo Initiate Virtual Environment for ChatGee
-  %python% -m pip install --upgrade pip > nul 2>&1
-  %pip_bin% install virtualenv > nul 2>&1
-  %python% -m venv venv_chatgee > nul 2>&1
+call:find_python 
+call:check_python_exist
+if "%python%" == "" (
+    pause
+    EXIT /B 0
 )
 
+call:find_pip
+
+if "%pip_bin%" == "" (
+  %python% -m ensurepip --upgrade > nul 2>&1
+) else (
+  echo pip3 Installation Confirmed !
+  goto :init_venv
+)
+
+call:find_pip
+
+:init_venv
+echo.
+echo Initiate Virtual Environment for ChatGee
+%python% -m pip install --upgrade pip > nul 2>&1
+%pip_bin% install virtualenv > nul 2>&1
+%python% -m venv venv_chatgee > nul 2>&1
+
+:source_activate
 call venv_chatgee\Scripts\activate.bat > nul 2>&1
 
 call :check_ngrok
@@ -97,7 +102,7 @@ if "%python%" == "" (
   echo Pyton 3.10 is not installed!. Please install with python-3.10.10.exe
 ) else (
   echo.
-  echo Python 3.10.10 Installation Confirmed !
+  echo Python 3.10 Installation Confirmed !
 )
 EXIT /B 0
 :find_pip
