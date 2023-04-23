@@ -52,8 +52,30 @@
                         </a>
                     {% endif %}
 
+                    <div class="comments" style="text-align: center; margin-top: 50px;">
+                        <div class="utterance-container" style="max-width: 85%; margin: 0 auto;">
+                            <script>
+                                // load utteranc comment
+                                let html = document.querySelector('html');
+                                var getTheme = html.dataset['mode'];
+                                getTheme = getTheme == null ? 'light' : getTheme;
+                        
+                                let theme = getTheme === 'dark' ? 'github-dark' : 'github-light';
+                                let s = document.createElement('script');
+                                s.src = 'https://utteranc.es/client.js';
+                                s.setAttribute('repo', 'woensug-choi/ChatGee');
+                                s.setAttribute('issue-term', 'title');
+                                s.setAttribute('theme', theme);
+                                s.setAttribute('label', 댓글);
+                                s.setAttribute('crossorigin', 'anonymous');
+                                s.setAttribute('async', '');
+                                document.querySelector('div.comments').innerHTML = '';
+                                document.querySelector('div.comments').appendChild(s);
+                            </script>
+                        </div>
+                    </div>
 
-                    <div class="utterance-post-footer" style="text-align: center; margin-top: 50px;">
+                    <!-- <div class="utterance-post-footer" style="text-align: center; margin-top: 50px;">
                         <div class="utterance-container" style="max-width: 85%; margin: 0 auto;">
                             <script src="https://utteranc.es/client.js"
                                 repo="woensug-choi/ChatGee"
@@ -64,7 +86,7 @@
                                 async>
                             </script>
                         </div>
-                    </div>
+                    </div> -->
 
                     <br><br><br><br>
                 </div>
