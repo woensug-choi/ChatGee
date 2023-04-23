@@ -16,7 +16,7 @@
 
 # 📖 ChatGee 사용설명서
 
-사용설명서 바로가기 : [📖 ChatGee 사용설명서](https://woensug-choi.github.io/ChatGee_Doc/jekyll/Introduction.html)
+사용설명서 바로가기 : [📖 ChatGee 사용설명서](https://woensug-choi.github.io/ChatGee_Doc/Introduction.html)
 
 
 
