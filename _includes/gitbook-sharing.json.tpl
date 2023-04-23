@@ -3,7 +3,7 @@
                 "facebook": false,
                 "google": false,
                 "github": true,
-                "github_link": "https://github.com/woensug-choi/jump-to-ros-gazebo",
+                "github_link": "https://github.com/woensug-choi/ChatGee",
                 "telegram": false,
                 "telegram_link": "https://t.me",
                 "instapaper": false,
