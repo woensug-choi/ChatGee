@@ -10,7 +10,7 @@ layout: post
 
 여기서는 작업하신 내용의 공유를 동의해주신 분들의 글을 기록합니다! :D
 
-본인의 작업내용을 기록하고 싶으시면 자유롭게 [`ChatGee_Doc` 레포지토리](https://github.com/woensug-choi/ChatGee_Doc)의 [Issues](https://github.com/woensug-choi/ChatGee_Doc/issues)나 [Pull Request](https://github.com/woensug-choi/ChatGee_Doc/pulls)에 남겨주세요!
+본인의 작업내용을 기록하고 싶으시면 자유롭게 [`ChatGee` 레포지토리](https://github.com/woensug-choi/ChatGee)의 [Issues](https://github.com/woensug-choi/ChatGee/issues)나 [Pull Request](https://github.com/woensug-choi/ChatGee/pulls)에 남겨주세요!
 
 # 목차
 
@@ -147,4 +147,4 @@ layout: post
    
 **11. 카카오톡 챗봇 서비스와 연결**
 
-  이후의 진행사항은 위도우 설치시와 동일합니다. [카카오톡 채널 설정](https://woensug-choi.github.io/ChatGee_Doc/KakaoTalk_Channel.html) 페이지를 참고하세요.
+  이후의 진행사항은 위도우 설치시와 동일합니다. [카카오톡 채널 설정](https://woensug-choi.github.io/ChatGee/KakaoTalk_Channel.html) 페이지를 참고하세요.

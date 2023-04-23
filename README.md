@@ -6,7 +6,7 @@ permalink: /
 
 **오픈소스 AI 카톡 챗봇 빌더 ChatGee 사용설명서**
 
-사용설명서 바로가기 : [📖ChatGee 사용설명서](https://woensug-choi.github.io/ChatGee_Doc/Introduction.html)
+사용설명서 바로가기 : [📖ChatGee 사용설명서](https://woensug-choi.github.io/ChatGee/Introduction.html)
 
 소스코드 바로가기 :
 [ChatGee 소스코드](https://github.com/woensug-choi/ChatGee)

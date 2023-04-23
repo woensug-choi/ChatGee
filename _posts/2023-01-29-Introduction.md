@@ -21,7 +21,7 @@ layout: post
 - ChatGPTers의 AI 챗봇 개발실과 함께합니다
   - [AI 챗봇 개발실 (ChatGPTers)](https://open.kakao.com/o/gECQhjbf)
 
-> 카카오톡 챗봇 등록에 시간이 최대 6일 소요됩니다. [채널 신설과 챗봇 등록](https://woensug-choi.github.io/ChatGee_Doc/KakaoTalk_Channel.html)을 우선 수행해 두시기 바랍니다!
+> 카카오톡 챗봇 등록에 시간이 최대 6일 소요됩니다. [채널 신설과 챗봇 등록](https://woensug-choi.github.io/ChatGee/KakaoTalk_Channel.html)을 우선 수행해 두시기 바랍니다!
 
 > 5초 후 응답하려면 '광고'의 성격을 가지므로 15원이 소모
 
@@ -29,7 +29,7 @@ layout: post
 
 | [벤치마크](http://pf.kakao.com/_RxoCkxj/chat) | [성경공부](http://pf.kakao.com/_FmUkxj/chat) | [상품소개](http://pf.kakao.com/_BCjxmxj/chat) | 
 | :---: | :---: | :---: |
-| <img src="https://woensug-choi.github.io/ChatGee_Doc/assets/images/ChatGee_Main.png" alt="ChatGee_Main" width="100"> | <img src="https://woensug-choi.github.io/ChatGee_Doc/assets/images/ChatGee_Bible.png" alt="ChatGee_Bible" width="100"> | <img src="https://woensug-choi.github.io/ChatGee_Doc/assets/images/ChatGee_Travel.png" alt="ChatGee_Travel" width="100"> |
+| <img src="https://woensug-choi.github.io/ChatGee/assets/images/ChatGee_Main.png" alt="ChatGee_Main" width="100"> | <img src="https://woensug-choi.github.io/ChatGee/assets/images/ChatGee_Bible.png" alt="ChatGee_Bible" width="100"> | <img src="https://woensug-choi.github.io/ChatGee/assets/images/ChatGee_Travel.png" alt="ChatGee_Travel" width="100"> |
 | [카톡링크](http://pf.kakao.com/_RxoCkxj/chat) | [카톡링크](http://pf.kakao.com/_FmUkxj/chat) | [카톡링크](http://pf.kakao.com/_BCjxmxj/chat) | 
 
 # 설치방법
@@ -63,7 +63,7 @@ layout: post
     - 동봉된 `python-3.10.10.exe` 또는 직접 파이썬 홈페이지에서 3.10.10 설치파일을 받아 설치
     - (주의사항!!) 아래 스크린샷과 같이 아래 `Add python.exe to PATH` 클릭 필수!
       - ADD PATH는 파이썬이 어느곳에서든지 실행되도록 설정하는 내용
-      <img src="https://woensug-choi.github.io/ChatGee_Doc/assets/images/python1.jpg" alt="파이썬 설치화면" width="350">
+      <img src="https://woensug-choi.github.io/ChatGee/assets/images/python1.jpg" alt="파이썬 설치화면" width="350">
 
     - 혹시 이미 파이썬이 설치되어 있어서 업그레이드 하거나 위 창을 만나지 못하는 경우, 파이썬이 잘 설치되어 있는지 확인하기 위해 윈도우 시작버튼을 누른 후 `cmd`를 검색해서 검은 창을 실행하고 `python --version`을 입력하여 파이썬 버전이 3.10.10이 나오는지 확인
       - 만약 오류가 있다면, Python 설치파일을 실행하여 삭제 후 다시 설치 진행
@@ -164,7 +164,7 @@ layout: post
 #### 6. 카카오톡 채널 신설 및 챗봇 등록
 > 카카오톡 챗봇 등록에 시간이 최대 6일 소요됩니다. 카카오톡 채널 신설 및 챗봇 등록을 우선 수행해 두시기 바랍니다!
 
-- [카카오톡 채널 신설 및 챗봇 등록 매뉴얼](https://woensug-choi.github.io/ChatGee_Doc/KakaoTalk_Channel.html)
+- [카카오톡 채널 신설 및 챗봇 등록 매뉴얼](https://woensug-choi.github.io/ChatGee/KakaoTalk_Channel.html)
 
 ## 개발자용 사용방법
 
