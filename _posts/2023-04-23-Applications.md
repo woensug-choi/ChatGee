@@ -23,7 +23,7 @@ layout: post
 
 ## 시놀로지 NAS에 챗지 서버 설치하기
 
-아싸가오리님 원글 링크 : [https://www.chatgpters.org/c/ai-developers/nas](https://www.chatgpters.org/c/ai-developers/nas)
+고종훈님 원글 링크 : [https://www.chatgpters.org/c/ai-developers/nas](https://www.chatgpters.org/c/ai-developers/nas)
 
 저는 고등학교 수학교사입니다.
 교육목표 달성을 위해 교사가 의도한 상황과 목적으로 학생들의 GPT 사용을 유도할 수 없을까?가 큰 고민이었습니다.
