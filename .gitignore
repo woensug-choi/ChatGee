@@ -19,4 +19,3 @@ dist
 tunnel_output.txt
 ngrok*
 .pytest*
-.DS_Store
