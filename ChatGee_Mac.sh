@@ -7,7 +7,7 @@ cleanup(){
 trap cleanup INT TERM
 
 find_python(){
-    for python in `where python3.10`
+    for python in `which python3.10`
     do
         if [[ ! -f "$python" ]]; then continue; fi
         var=`$python -c 'import sys;print(sys.version_info.minor==10)' 2>&1`
@@ -34,7 +34,7 @@ ngrok_yaml_path(){
    echo "/Users/"$USER"/Library/Application Support/ngrok/ngrok.yml"
 }
 check_ngrok(){
-   if [[ -f "ngrok" ]] then
+   if [[ -f "ngrok" ]]; then
        return 1
    fi
    arch=`uname -m`
@@ -47,14 +47,14 @@ check_ngrok(){
    unzip $zip 
 }
 check_token_and_api(){
-    if [[ $1 == "YOUR_OPEN_AI_API_KEY" ]] then;
+    if [[ $1 == "YOUR_OPEN_AI_API_KEY" ]]; then
         echo ""
-        echo "You should input OPEN_API "API_KEY" in settings.yaml"
+        echo "You should input OPEN_API \"API_KEY\" in settings.yaml"
         exit 1
     fi
-    if [[ $2 == "YOUR_NGROK_TOKEN" ]] then;
+    if [[ $2 == "YOUR_NGROK_TOKEN" ]]; then
         echo ""
-        echo "You should input NGROK "TOKEN" in settings.yaml"
+        echo "You should input NGROK \"TOKEN\" in settings.yaml"
         exit 1
     fi
 }
@@ -109,6 +109,7 @@ port_number=`python -c "import yaml; stream=open('settings.yaml', 'r'); print(ya
 
 echo
 echo "(4/4) Run ngrok"
+
 ./ngrok config add-authtoken $ngrok_token
 ./ngrok http $port_number
 

@@ -58,7 +58,7 @@ if "%open_api_key%" == "YOUR_OPEN_AI_API_KEY" (
   pause
   EXIT /B 0
 )
-if "%ngrok_token%" == "YOUR_OPEN_AI_API_KEY" (
+if "%ngrok_token%" == "YOUR_NGROK_TOKEN" (
   echo You should input NGROK "TOKEN" in settings.yaml
   pause
   EXIT /B 0
