@@ -35,8 +35,8 @@ layout: post
 # 설치방법
 
 - [초급자용](#초급자용-설치방법)
-  - 윈도우 Batch 실행 파일 `ChatGee.bat`
-  - MacOS Shell 파일 실행 `ChatGee.sh`
+  - 윈도우 Batch 실행 파일 `ChatGee_Run`
+  - MacOS Automator 어플리케이션을 실행 `ChatGee_Run_Mac`
 - [개발자용](#채발자용-사용방법) : Flask 앱 `chatgee/run_server.py` 
   - `settings.yaml`에서 챗지 성격, 역할, 내용 디자인
   - Flask 내 Threading/Queue 그대로 `uwsgi` 사용가능
@@ -125,24 +125,27 @@ layout: post
   - 채널 친구가 아닌 상태에서 사용가능 횟수
     - `settings.yaml > SETTINGS > NO_FRIEND_USE_LIMIT`에서 정의
 
-#### 4. `ChatGee` 실행
+#### 4. `ChatGee_Run` 실행
 - 윈도우 사용자 (맥버전은 아래 참조)
-  - ChatGee의 소스코드에서 `ChatGee` 실팽파일을 더블클릭으로 실행
+  - ChatGee의 소스코드에서 `ChatGee_Run` 실팽파일을 더블클릭으로 실행
     - `Windows의 PC 보호`와 함께 파란색 창이 뜨면, 표시 내용 중 밑줄이 쳐진 `추가정보`를 클릭 후 `실행`을 클릭
     - 총 4 단계로 챗지서버를 구동, 중간 단계에서 `Windows Defender 방화벽`이 서버로 사용되는것을 확인하는 창이 나타나며 이때 `액세스 허용`을 클릭
     - 실행이 완료되면, Ngrok가 발급한 주소가 나타남
-      - 주소가 나타나지 않고 `(4/4) Run ngrok`에서 멈춰있다면, 검은 `cmd`창을 종료하고 다시 `ChatGee.bat`을 실행합니다.
+      - 주소가 나타나지 않고 `(4/4) Run ngrok`에서 멈춰있다면, 검은 `cmd`창을 종료하고 다시 `ChatGee_Run.bat`을 실행합니다.
     - 뭔가 이상하거나 문제가 생기면 이 창을 종료하고 다시 실행
 
 - MacOS 사용자
-  - `Terminal`을 실행 후 ChatGee 소스파일 경로로 이동
-    - 폴더로 이동하려면 `cd 폴더명`을 사용, 상위 폴더로 이동하려면 `cd ..`을 사용, 현재 폴더의 내용물을 확인하려면 `ls`를 사용
-  - ChatGee 소스파일 위치에서 다음 명령어를 실행
-    ```bash
-    chmod +x ChatGee_Mac.sh
-    ./ChatGee_Mac.sh
-    ```
-    - `chmod`로 시작하는 명령어는 한번만 실행하면 됨
+  - 챗지 아이콘으로 되어있는 `ChatGee_Run_Mac` 실행파일을 더블클릭으로 실행
+    - 실행이 완료되면, Ngrok가 발급한 주소가 나타남
+  - 실행파일이 작동안할 경우,
+    - `Terminal`을 실행 후 ChatGee 소스파일 경로로 이동
+      - 폴더로 이동하려면 `cd 폴더명`을 사용, 상위 폴더로 이동하려면 `cd ..`을 사용, 현재 폴더의 내용물을 확인하려면 `ls`를 사용
+    - ChatGee 소스파일 위치에서 다음 명령어를 실행
+      ```bash
+      chmod +x ChatGee_Mac.sh
+      sh ChatGee_Mac.sh
+      ```
+      - `chmod`로 시작하는 명령어는 한번만 실행하면 됨
 
 
 - 챗지 서버 접속
