@@ -6,6 +6,10 @@ cleanup(){
 
 trap cleanup INT TERM
 
+mypath=${0:a}
+dirname=$mypath:h
+cd $dirname
+
 find_python(){
     for python in `which python3.10`
     do
