@@ -35,8 +35,8 @@ layout: post
 # 설치방법
 
 - [초급자용](#초급자용-설치방법)
-  - 윈도우 Batch 실행 파일 `ChatGee_Run`
-  - MacOS Automator 어플리케이션을 실행 `ChatGee_Run_Mac`
+  - 윈도우 Batch 실행 파일 `ChatGee_Win` 
+  - MacOS Shell 실행 파일 `ChatGee_Mac`
 - [개발자용](#채발자용-사용방법) : Flask 앱 `chatgee/run_server.py` 
   - `settings.yaml`에서 챗지 성격, 역할, 내용 디자인
   - Flask 내 Threading/Queue 그대로 `uwsgi` 사용가능
@@ -77,8 +77,8 @@ layout: post
 #### 3. `Settings.yaml` 설정
 - `ChatGee-XX.zip`(XX는 버전) 폴더에 `Settings` 파일이 있음
 - `Settings` 파일을 열고, 아래 항목을 설정
-  - `메모장` 또는 원하는 편집 프로그램으로 열어서 아래 항목을 설정
-  - `연결 프로그램`에서 `메모장`을 선택하면 메모장으로 열림
+  - `메모장` (윈도우) 또는 `TextEdit` (맥) 원하는 편집 프로그램으로 열어서 아래 항목을 설정
+  - `연결 프로그램`에서 `메모장` (윈도우) 또는 `TextEdit` (맥) 을 선택하면 메모장으로 열림
 - 필수 설정 항목
   - Ngrok Key
     - Ngrok를 이용하면 고정아이피가 없는 상태에서도 외부에서 접속 가능
@@ -125,28 +125,26 @@ layout: post
   - 채널 친구가 아닌 상태에서 사용가능 횟수
     - `settings.yaml > SETTINGS > NO_FRIEND_USE_LIMIT`에서 정의
 
-#### 4. `ChatGee_Run` 실행
+#### 4. `ChatGee` 실행
 - 윈도우 사용자 (맥버전은 아래 참조)
-  - ChatGee의 소스코드에서 `ChatGee_Run` 실팽파일을 더블클릭으로 실행
+  - ChatGee의 소스코드에서 `ChatGee_Win` 실팽파일을 더블클릭으로 실행
     - `Windows의 PC 보호`와 함께 파란색 창이 뜨면, 표시 내용 중 밑줄이 쳐진 `추가정보`를 클릭 후 `실행`을 클릭
     - 총 4 단계로 챗지서버를 구동, 중간 단계에서 `Windows Defender 방화벽`이 서버로 사용되는것을 확인하는 창이 나타나며 이때 `액세스 허용`을 클릭
     - 실행이 완료되면, Ngrok가 발급한 주소가 나타남
-      - 주소가 나타나지 않고 `(4/4) Run ngrok`에서 멈춰있다면, 검은 `cmd`창을 종료하고 다시 `ChatGee_Run.bat`을 실행합니다.
+      - 주소가 나타나지 않고 `(4/4) Run ngrok`에서 멈춰있다면, 검은 `cmd`창을 종료하고 다시 `ChatGee_Win`을 실행합니다.
     - 뭔가 이상하거나 문제가 생기면 이 창을 종료하고 다시 실행
 
 - MacOS 사용자
-  - 챗지 아이콘으로 되어있는 `ChatGee_Run_Mac` 실행파일을 더블클릭으로 실행
+  - 챗지 아이콘으로 되어있는 `ChatGee_Mac` 파일을 우클릭 후 `Terminal`로 열기로 실행
     - 실행이 완료되면, Ngrok가 발급한 주소가 나타남
+    - 한번 실행 후에는 `ChatGee_Mac` 파일을 더블클릭으로 실행 가능
   - 실행파일이 작동안할 경우,
     - `Terminal`을 실행 후 ChatGee 소스파일 경로로 이동
       - 폴더로 이동하려면 `cd 폴더명`을 사용, 상위 폴더로 이동하려면 `cd ..`을 사용, 현재 폴더의 내용물을 확인하려면 `ls`를 사용
     - ChatGee 소스파일 위치에서 다음 명령어를 실행
       ```bash
-      chmod +x ChatGee_Mac.sh
-      sh ChatGee_Mac.sh
+      ./ChatGee_Mac.sh
       ```
-      - `chmod`로 시작하는 명령어는 한번만 실행하면 됨
-
 
 - 챗지 서버 접속
   - 실행이 완료되면, `ngrok`가 발급한 주소로 접속

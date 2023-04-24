@@ -15,7 +15,7 @@ permalink: /
 > * 최상의 가독성을 위해 데스크탑 환경에서 [Chrome](https://www.google.com/chrome/) 또는 [Edge](https://www.microsoft.com/edge) 사용을 권장합니다.
 
 ### 도움을 주신 분들
-> 김\*민💕, [Hyunjun Jeon](https://github.com/HyunjunJeon)💕, [데비안](https://github.com/NextLevelSuperComputing)💕, [Jhlee1012](https://github.com/Jhlee1012)💕, 고종훈💕, 아싸가오리💕, 김*성💕, 김석\*💕, 김영\*💕,안세\*💕,김슬\*💕,김수\*💕,정\*중💕,윤\*솔💕,박\*도💕,박\*주💕, 송\*용💕,연\*훈💕,김\*명💕,이\*라💕,박\*우💕,장\*기💕,김\*희💕
+> 송\*철💕, 김\*민💕, [Hyunjun Jeon](https://github.com/HyunjunJeon)💕, [데비안](https://github.com/NextLevelSuperComputing)💕, [Jhlee1012](https://github.com/Jhlee1012)💕, 고종훈💕, 아싸가오리💕, 김*성💕, 김석\*💕, 김영\*💕,안세\*💕,김슬\*💕,김수\*💕,정\*중💕,윤\*솔💕,박\*도💕,박\*주💕, 송\*용💕,연\*훈💕,김\*명💕,이\*라💕,박\*우💕,장\*기💕,김\*희💕
 
 ### License
 
