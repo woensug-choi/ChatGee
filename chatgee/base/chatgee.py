@@ -92,12 +92,12 @@ class ChatGeeOBJ:
             run_flag = False
 
         # Find Special Commands
-        if content['action']['detailParams']['prompt']["value"] == '📓 사용설명서':
+        if content['userRequest']['utterance'] == '📓 사용설명서':
             response = generate_documents(self.ChatGee_Config)
             run_flag = False
 
         # Clear Chat History
-        if content['action']['detailParams']['prompt']["value"] == '💫 새로운 시작':
+        if content['userRequest']['utterance'] == '💫 새로운 시작':
             self.DB.delete_conversation_data(userid)
             response = ChatGee_KakaoTalk.insert_text("대화한적이..있었..없었습니다...\n🪄💫✨💆‍♂️🦄🌈🌟🎉🍭🎠")
             run_flag = False
@@ -129,7 +129,7 @@ class ChatGeeOBJ:
                 time.sleep(0.01)
 
             if user_data[4] % self.ChatGee_Config['SETTINGS']['ADVERTISEMENT_FREQUENCY'] == 0 \
-                and content['action']['detailParams']['prompt']["value"] != '생각 다 했니???!':
+                and content['userRequest']['utterance'] != '생각 다 했니???!':
                 response = generate_advertisement(self.ChatGee_Config, response)
 
         # Return back to kakao
@@ -140,7 +140,7 @@ class ChatGeeOBJ:
         """Process the prompt received from Flask"""
         content = request_queue.get()
         userid = content['userRequest']['user']['id']
-        content = content['action']['detailParams']['prompt']["value"]
+        content = content['userRequest']['utterance']
         content = ''.join(str(e) for e in content)
 
         # run queue threading since kakaotalk chatbot will only wait 5 seconds

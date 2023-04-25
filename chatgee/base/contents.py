@@ -13,7 +13,7 @@ def generate_greetings(ChatGee_Config, content):
         title=ChatGee_Config['CONTENTS']['GREETINGS']['TITLE'],
         description=ChatGee_Config['CONTENTS']['GREETINGS']['TEXTS'])
     try:
-        content = content['action']['detailParams']['prompt']["value"]
+        content = content['userRequest']['utterance']
         content = ''.join(str(e) for e in content)
         response = ChatGee_KakaoTalk.insert_button_text(response, '📓 사용설명서 보기', '📓 사용설명서')
         response = ChatGee_KakaoTalk.insert_button_text(response, '이전 말 다시 적기 ✍🏻', content)

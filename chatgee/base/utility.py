@@ -70,7 +70,7 @@ def send_query_local(query, ChatGee_Config):
                     'plusfriend_user_key': 'Hr9Qhm9PRazi'
                 }
             },
-            'utterance': 'Hello, 안녕!',
+            'utterance': query,
             'params': {
                 'surface': 'Kakaotalk.plusfriend'
             },
