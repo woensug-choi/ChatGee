@@ -118,11 +118,9 @@ layout: post
 ![fig-12](https://woensug-choi.github.io/ChatGee/assets/images/12.jpg)
 ![fig-13](https://woensug-choi.github.io/ChatGee/assets/images/13.jpg)
 
-- `폴백 블록`의 필수 파라메터를 설정합니다.
-  - 파라메터 설정에서 오른족의 필수 파라메터를 추가하는 `+` 버튼을 누르고, 아래와 같이 `prompt` 파라메터를 설정합니다.
+- `폴백 블록`의 일반 파라메터를 설정합니다.
+  - 파라메터 설정에서 일반 파라메터를 추가하는 `+` 버튼을 누르고, 아래와 같이 `prompt` 파라메터를 설정합니다.
     - 파라메터명에 `prompt`, 엔티티는 `sys.text`를 선택, `값`에는 `$prompt`를 입력합니다. 여기서 `$`는 달러 표시 입니다.
-  - 이때 필수 파라메터의 되뭍기 질문(빨간 버튼)을 반드시 설정해야 하며 내용은 아무거나 상관없습니다.
-  - 일반파라메터로 등록하셔도 작동합니다.
 
 ![fig-17](https://woensug-choi.github.io/ChatGee/assets/images/17.jpg)
 ![fig-18](https://woensug-choi.github.io/ChatGee/assets/images/18.jpg)
