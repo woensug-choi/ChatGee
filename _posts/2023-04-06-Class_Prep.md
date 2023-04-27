@@ -7,6 +7,9 @@ layout: post
 exclude: true
 ---
 
+- [필요 프로그램 설치](#필요-프로그램-설치)
+  - [파이썬 3.10 설치](#파이썬-310-설치)
+  - [VSCode 설치](#vscode-설치)
 - [플러스 채널 생성](#플러스-채널-생성)
   - [카카오톡 비즈니스 계정 생성](#카카오톡-비즈니스-계정-생성)
   - [카카오톡 채널 생성](#카카오톡-채널-생성)
@@ -20,6 +23,36 @@ exclude: true
 > 
 > **문의사항은 '워크샾 참여 멤버 오픈톡방'에서 문의해 주시기 바랍니다**
 > - 워크샾 참여멤버 오픈톡방 : [접속링크](https://open.kakao.com/o/gqCA5Odf) (비밀번호 : `chatgee`)
+
+
+## 필요 프로그램 설치
+
+### 파이썬 3.10 설치
+
+- 공식 파이썬 3.10.10 다운로드 링크
+  - 맥버전 : [다운로드 링크](https://www.python.org/ftp/python/3.10.10/python-3.10.10-macos11.pkg)
+  - 윈도우 : [다운로드 링크](https://www.python.org/ftp/python/3.10.10/python-3.10.10-amd64.exe)
+    - 📢📢 윈도우 주의사항!! 아래 스크린샷과 같이 아래 `Add python.exe to PATH` 클릭 필수!
+    - ADD PATH는 파이썬이 어느곳에서든지 실행되도록 설정하는 내용
+  
+      <img src="https://woensug-choi.github.io/ChatGee_Doc/assets/images/python1.jpg" style="height:270px;">
+
+- 설치확인
+  - 맥
+    - `Terminal`앱을 실행시키고 `python --version`을 입력하여 파이썬 버전 3.10.10 확인
+  - 윈도우
+    - 윈도우 시작버튼을 누른 후 `cmd`를 검색해서 검은 창을 실행하고 `python --version`을 입력하여 파이썬 버전 3.10.10 확인
+
+
+### VSCode 설치
+
+- VS Code는 Microsoft에서 개발한 소스코드 편집기
+  - 파이썬, 자바스크립트, HTML, CSS 등 다양한 언어를 지원
+  - 다양한 플러그인을 설치하여 개발에 유용하게 사용 가능
+  - 📢 [VS Code 다운로드 링크 : code.visualstudio.com/download](https://code.visualstudio.com/download)
+    - 윈도우면 윈도우 아이콘, 맥은 맥 아이콘을 눌러 설치파일 다운로드
+  - 다운로드 후 설치 진행
+
 
 
 ## 플러스 채널 생성
