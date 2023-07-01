@@ -113,7 +113,7 @@ exclude: true
 
 - Step 1-4 본인 메일에서 수신메일 검증 버튼 클릭
 
-![Prep_1_3](https://woensug-choi.github.io/ChatGee/assets/images/Prep_1_4.png)
+![Prep_1_4](https://woensug-choi.github.io/ChatGee/assets/images/Prep_1_4.png)
 
 - Step 1-5 넘어간 페이지에서,
   - Cloud Account Name : `계정이름`
