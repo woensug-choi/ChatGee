@@ -101,19 +101,19 @@ exclude: true
 
 - Step 1-1 <a href="https://www.oracle.com/kr/cloud/" target="_blank"> 오라클 클라우드 사이트 페이지 https://www.oracle.com/kr/cloud/</a> 에서 로그인 페이지 이동
 
-![Prep_1_1](https://woensug-choi.github.io/ChatGee/assets/images/Prep_1_1.png)
+![Prep_1_1](https://woensug-choi.github.io/ChatGee/assets/images/prep_1_1.png)
 
 - Step 1-2 회원가입 진행
 
-![Prep_1_2](https://woensug-choi.github.io/ChatGee/assets/images/Prep_1_2.png)
+![Prep_1_2](https://woensug-choi.github.io/ChatGee/assets/images/prep_1_2.png)
 
 - Step 1-3 메일주소 확인요청
 
-![Prep_1_3](https://woensug-choi.github.io/ChatGee/assets/images/Prep_1_3.png)
+![Prep_1_3](https://woensug-choi.github.io/ChatGee/assets/images/prep_1_3.png)
 
 - Step 1-4 본인 메일에서 수신메일 검증 버튼 클릭
 
-![Prep_1_4](https://woensug-choi.github.io/ChatGee/assets/images/Prep_1_4.png)
+![Prep_1_4](https://woensug-choi.github.io/ChatGee/assets/images/prep_1_4.png)
 
 - Step 1-5 넘어간 페이지에서,
   - Cloud Account Name : `계정이름`
