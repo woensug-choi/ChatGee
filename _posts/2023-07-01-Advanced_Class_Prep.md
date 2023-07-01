@@ -7,15 +7,6 @@ layout: post
 exclude: true
 ---
 
-- [오라클 클라우드 평생무료 인스턴스 설정](#오라클-클라우드-평생무료-인스턴스-설정)
-  - [오라클 클라우드 회원가입](#오라클-클라우드-회원가입)
-  - [오라클 클라우드 로그인](#오라클-클라우드-로그인)
-  - [오라클 클라우드 서버생성](#오라클-클라우드-서버생성)
-  - [오라클 클라우드 서버 접속](#오라클-클라우드-서버-접속)
-  - [오라클 클라우드 개발환경 설정](#오라클-클라우드-개발환경-설정)
-
-
-
 워크샾 참여를 환영합니다 🥳🎉
 본 페이지는 직접 주소를 입력해 접속해야만 보실 수 있습니다!
 
@@ -23,6 +14,78 @@ exclude: true
 > 
 > **문의사항은 '워크샾 참여 멤버 오픈톡방'에서 문의해 주시기 바랍니다**
 > - 워크샾 참여멤버 실전방 오픈톡방 : [접속링크](https://open.kakao.com/o/goF68Ssf) (비밀번호 : `chatgee`)
+
+
+- [카카오톡 플러스 채널 생성](#카카오톡-플러스-채널-생성)
+  - [카카오톡 비즈니스 계정 생성](#카카오톡-비즈니스-계정-생성)
+  - [카카오톡 채널 생성](#카카오톡-채널-생성)
+- [카카오톡 챗봇 계정 생성](#카카오톡-챗봇-계정-생성)
+  - [챗봇 관리자센터 오픈베타 참여신청](#챗봇-관리자센터-오픈베타-참여신청)
+- [오라클 클라우드 평생무료 인스턴스 설정](#오라클-클라우드-평생무료-인스턴스-설정)
+  - [오라클 클라우드 회원가입](#오라클-클라우드-회원가입)
+  - [오라클 클라우드 로그인](#오라클-클라우드-로그인)
+  - [오라클 클라우드 서버생성](#오라클-클라우드-서버생성)
+  - [오라클 클라우드 서버 접속](#오라클-클라우드-서버-접속)
+  - [오라클 클라우드 개발환경 설정](#오라클-클라우드-개발환경-설정)
+
+## 카카오톡 플러스 채널 생성
+
+### 카카오톡 비즈니스 계정 생성
+카카오 비즈니스 홈페이지에 접속하여 오른 쪽 상단 `로그인` 에서 카카오톡 비즈니스 계정을 생성, 로그인합니다.
+- 카카오비즈니스 : [https://business.kakao.com/](https://business.kakao.com/)
+> 개인도 가능합니다! 오히려 개인으로 등록하고 진행하는 것이 전체적인 절차 처리가 빠릅니다. 회사계정을 등록하려면 공식적 절차상 서류도 많이 필요하고 시간도 오래 걸립니다.
+
+![fig-1](https://woensug-choi.github.io/ChatGee/assets/images/1.jpg)
+
+- 계정 생성 후 다시 비즈니스 채널 페이지로 돌아와서 오른쪽 상단 `내 비즈니스`로 들어갑니다.
+
+![fig-2](https://woensug-choi.github.io/ChatGee/assets/images/2.jpg)
+
+### 카카오톡 채널 생성
+
+- `비즈니스 관리자 센터`로 들어가서 `채널 시작하기`를 클릭합니다.
+  - 채널 생성 페이지로 들어가며 `+ 새 채널만들기`를 클립합니다.
+  - 프로필 사진, 채널이름, 검색용 아이디, 소개글과, 카테고리를 설정합니다.
+  - 프로필 사진은 언제든지 번경 가능하지만, 채널 이름은 변경이 아주 어렵습니다! 신중하게 설정해주세요.
+
+![fig-3](https://woensug-choi.github.io/ChatGee/assets/images/3.jpg)
+![fig-4](https://woensug-choi.github.io/ChatGee/assets/images/4.jpg)
+![fig-5](https://woensug-choi.github.io/ChatGee/assets/images/5.jpg)
+
+- 생성이 완료되면 `채널 관리자 센터`로 접속되며 여기서 기본적으로 프로필 공개설정을 합니다.
+  - 화면 오른쪽 하단의 `채널 공개` 및 `검색 허용`을 `On`으로 설정합니다.
+
+![fig-6](https://woensug-choi.github.io/ChatGee/assets/images/6.jpg)
+
+- 채널의 주소를 확인해보시기 바랍니다.
+  - `채널 URL`은 `https://pf.kakao.com/_xaxaxaxax`와 같은 형태입니다.
+  - 이 주소는 챗봇 설정에서 필요하므로 따로 복사해 두시기 바랍니다.
+  - `채널 URL`은 `채널 관리자 센터`의 왼쪽 탭들 중 `채널 홍보`에서 확인할 수 있습니다.
+
+![fig-8](https://woensug-choi.github.io/ChatGee/assets/images/8.jpg)
+- 이제 채널이 생성되었으며, 이 채널을 통해 채널과 챗봇을 연결시키는 작업으로 넘어갑니다.
+  - 먼저 `채널 관리자 센터`의 왼쪽 탭 중 `비즈니스 도구 > 챗봇`으로 들어갑니다.
+  - 여기서, `챗봇 관리자센터 바로가기`를 클릭합니다.
+
+![fig-7](https://woensug-choi.github.io/ChatGee/assets/images/7.jpg)
+
+## 카카오톡 챗봇 계정 생성
+
+- `챗봇 관리자센터`에 들어가려면 `OBT (오픈베타)` 신청을 해야합니다. 이 신청을 대게 3~5일 정도 소요되므로 미리 신청해 두시는게 좋습니다. 또한, 개인은 쉽게 승인이 되나 회사계정 또는 비즈니스는 까다로운 서류 절차를 진행해야 하므로 먼저 개인으로 전체적인 챗봇 개발과정을 진행해 보시는 것을 추천드립니다.
+
+### 챗봇 관리자센터 오픈베타 참여신청
+
+- `기업`과 `개인` 중 개인을 선택하고 앞서 생성한 카카오톡 채널의 URL을 입력합니다.
+  - `채널 URL`은 `https://pf.kakao.com/_xaxaxaxax`와 같은 형태입니다.
+  - `채널 URL`은 `채널 관리자 센터`의 왼쪽 탭들 중 `채널 홍보`에서 확인할 수 있습니다.
+- 신청사유는 간단이 기입하셔도 문제 없었습니다.
+
+![fig-9](https://woensug-choi.github.io/ChatGee/assets/images/9.jpg)
+
+- 신청이 완료되면, `챗봇 관리자센터`로 들어가지고 다음과 같은 페이지를 보실 수 있습니다. 여기까지 하시면 워크샾 준비는 끝입니다! 곧 뵙겠습니다!
+
+![fig-8](https://woensug-choi.github.io/ChatGee/assets/images/8.jpg)
+
 
 ## 오라클 클라우드 평생무료 인스턴스 설정
 
@@ -34,19 +97,19 @@ exclude: true
 
 - Step 1-1 <a href="https://www.oracle.com/kr/cloud/" target="_blank"> 오라클 클라우드 사이트 페이지 https://www.oracle.com/kr/cloud/</a> 에서 로그인 페이지 이동
 
-![prep_1_1](../assets/images/prep_1_1.png)
+![Prep_1_1](https://woensug-choi.github.io/ChatGee/assets/images/Prep_1_1.png)
 
 - Step 1-2 회원가입 진행
 
-![prep_1_2](../assets/images/prep_1_2.png)
+![Prep_1_2](https://woensug-choi.github.io/ChatGee/assets/images/Prep_1_2.png)
 
 - Step 1-3 메일주소 확인요청
 
-![prep_1_3](../assets/images/prep_1_3.png)
+![Prep_1_3](https://woensug-choi.github.io/ChatGee/assets/images/Prep_1_3.png)
 
 - Step 1-4 본인 메일에서 수신메일 검증 버튼 클릭
 
-![prep_1_3](../assets/images/prep_1_4.png)
+![Prep_1_3](https://woensug-choi.github.io/ChatGee/assets/images/Prep_1_4.png)
 
 - Step 1-5 넘어간 페이지에서,
   - Cloud Account Name : `계정이름`
@@ -56,32 +119,32 @@ exclude: true
 
 - Step 1-6 체크박스 모두 동의 후 다음페이지 이동
 
-![prep_1_5](../assets/images/prep_1_5.png)
+![Prep_1_5](https://woensug-choi.github.io/ChatGee/assets/images/Prep_1_5.png)
 
 - Step 1-7 넘어간 페이지에서,
   - `주소/전화번호 입력` (자세하진 않아도 정확해야 합니다)
 
-![prep_1_6](../assets/images/prep_1_6.png)
+![Prep_1_6](https://woensug-choi.github.io/ChatGee/assets/images/Prep_1_6.png)
 
 - Step 1-8 다음으로 `신용카드 정보 등록` : 무료서버만 사용할 예정이나, 회원가입엔 신용카드정보가 필요
   - 신용카드 입력 중 문제가 생기면, 뭔가 꼬여서 고객센터 연락하라고 합니다. 이경우, 5분이상 후에 다시 메일에 온 메일인증 버튼 단계부터 다시 시도
 
-![prep_1_7](../assets/images/prep_1_7.png)
+![Prep_1_7](https://woensug-choi.github.io/ChatGee/assets/images/Prep_1_7.png)
 
 - Step 1-9 신용카드 등록이 완료되면 `동의 체크박스 클릭` 후 회원가입 완료버튼 클릭
   - 자동으로 넘어간 페이지에서 기다리시면 오라클 로그인 페이지로 자동으로 넘어갑니다.
 
-![prep_1_8](../assets/images/prep_1_8.png)
+![Prep_1_8](https://woensug-choi.github.io/ChatGee/assets/images/Prep_1_8.png)
 
 ### 오라클 클라우드 로그인
 
 - Step 2-1 앞서 설정한 `로그인용 계정이름`으로 로그인을 시작합니다.
 
-![prep_1_9](../assets/images/prep_1_9.png)
+![Prep_1_9](https://woensug-choi.github.io/ChatGee/assets/images/Prep_1_9.png)
 
 - Step 2-2 다음으로 `메일주소`와 `비밀번호`로 최종 로그인합니다.
 
-![prep_1_10](../assets/images/prep_1_10.png)
+![Prep_1_10](https://woensug-choi.github.io/ChatGee/assets/images/Prep_1_10.png)
 
 - Step 2-3 처음 로그인을 시도하면 `Secure Verification (보안인증)` 설정 페이지가 나타납니다
   - 클라우드 서버 계정을 해킹해 좀비피씨로 몇백~몇천만원어치 사용하는 경우가 빈번히 있었던 시절 이후 대부분 보안인증을 요구합니다.
@@ -90,11 +153,11 @@ exclude: true
   - 앱스토어 또는 구글스토어에서 `Oracle Mobile Authenticator` 를 검색해 핸드폰에 설치하고 앱을 실행후 `계정추가(Add Account)`를 진행하면 나타나는 카메라로 QR코드를 인식하면 나오는 보안 OTP 번호로 보안인증을 수행합니다.
   - 완료후 다시 로그인합니다
 
-![prep_1_11](../assets/images/prep_1_11.png)
+![Prep_1_11](https://woensug-choi.github.io/ChatGee/assets/images/Prep_1_11.png)
 
 - 로그인에 성공하면 다음과 같은 Dashboard 화면이 나옵니다.
 
-![prep_1_12](../assets/images/prep_1_12.png)
+![Prep_1_12](https://woensug-choi.github.io/ChatGee/assets/images/Prep_1_12.png)
 
 
 ### 오라클 클라우드 서버생성
@@ -102,46 +165,46 @@ exclude: true
   - 대쉬보드에서 먼저 오른쪽 위 지구본 버튼으로 한글로 변경합니다.
 - 로그인에 후 대쉬보드에서 `인스턴스 컴퓨트`를 클릭해 이동합니다.
 
-![prep_1_13](../assets/images/prep_1_13.png)
+![Prep_1_13](https://woensug-choi.github.io/ChatGee/assets/images/Prep_1_13.png)
 
 
 - 인스턴스 컴퓨트 페이지에서 먼저 왼쪽아래 `구획`에서 계정을 선택합니다.
 - 그러면 `인스턴스 생성` 버튼이 보입니다. 클릭합니다.
 
-![prep_1_14](../assets/images/prep_1_14.png)
+![Prep_1_14](https://woensug-choi.github.io/ChatGee/assets/images/Prep_1_14.png)
 
 
 - `인스턴스 이름`을 설정합니다.
 
-![prep_1_15](../assets/images/prep_1_15.png)
+![Prep_1_15](https://woensug-choi.github.io/ChatGee/assets/images/Prep_1_15.png)
 
 
 - `이미지 및 구성` 항목의 `편집`을 클릭합니다.
 - 기본 `평생무료` 이미지는 Standard E2.1.Micro라고 하는 일반 CPU의 코어 1개로 되어있습니다. 코어 1개는 아무래도 사용성이 떨어지니 새로 나온 ARM기반의 CPU 4개짜리로 변경하려합니다.
   - 이부분에서, CPU 4개짜리 ARM 인스턴스는 인기가 많아 마지막에 생성이 안되는 경우가 있습니다. 그런경우 다른 시간에 여러번 시도해서 뚫어놓으시면 좋습니다. 정말 안된다면, 기존의 Standard E2.1.Micro로 생성해 주시기 바랍니다. 다음 페이지에 이어서  CPU 4개짜리 ARM 설정방법을 설명합니다.
 
-![prep_1_15-1](../assets/images/prep_1_15-1.png)
+![Prep_1_15-1](https://woensug-choi.github.io/ChatGee/assets/images/Prep_1_15-1.png)
 
 - `Change Shape`을 클릭해 인스턴스의 종류를 변경하는 페이지로 이동합니다.
   
-![prep_1_15-2](../assets/images/prep_1_15-2.png)
+![Prep_1_15-2](https://woensug-choi.github.io/ChatGee/assets/images/Prep_1_15-2.png)
 
 - `Ampere` 타입 선택 후 `Standard.A1.Flex`를 체크합니다.
 
-![prep_1_15-3](../assets/images/prep_1_15-3.png)
+![Prep_1_15-3](https://woensug-choi.github.io/ChatGee/assets/images/Prep_1_15-3.png)
 
 - `OCPU 수` 를 4로 설정합니다. 그 이상은 무료가 아닙니다.
 
-![prep_1_15-4](../assets/images/prep_1_15-4.png)
+![Prep_1_15-4](https://woensug-choi.github.io/ChatGee/assets/images/Prep_1_15-4.png)
 
 - 다음으로 네트워킹을 설정합니다. 
 
-![prep_1_16](../assets/images/prep_1_16.png)
-![prep_1_17](../assets/images/prep_1_17.png)
+![Prep_1_16](https://woensug-choi.github.io/ChatGee/assets/images/Prep_1_16.png)
+![Prep_1_17](https://woensug-choi.github.io/ChatGee/assets/images/Prep_1_17.png)
 
 - 다음으로 인스턴스에 접속하기 위한 `암호키 (전용키, 공용키 모두!)`를 다운받고 인스턴스를 `생성`합니다.
 
-![prep_1_18](../assets/images/prep_1_18.png)
+![Prep_1_18](https://woensug-choi.github.io/ChatGee/assets/images/Prep_1_18.png)
 
 
 - 다운받은 암호키는 2개의 파일입니다
@@ -154,7 +217,7 @@ exclude: true
 
 - 여기서 생성한 인스턴스에 접속할 수 있는 `고정아이피`를 확인할 수 있습니다.
 
-![prep_1_19](../assets/images/prep_1_19.png)
+![Prep_1_19](https://woensug-choi.github.io/ChatGee/assets/images/Prep_1_19.png)
 
 ### 오라클 클라우드 서버 접속
 
@@ -163,30 +226,30 @@ exclude: true
 
 - 실행 후 '왼쪽 탭에서 `테트리스`(익스텐션) 검색 아이콘 클릭 -> `remote` 검색, `Remote-SSH` 설치
 
-![prep_1_20](../assets/images/prep_1_20.png)
+![Prep_1_20](https://woensug-choi.github.io/ChatGee/assets/images/Prep_1_20.png)
 
 - `Remote-SSH`설치 완료 후 후, 왼쪽 아래 `><`파란버튼 (Remote SSH 연결 버튼) 클릭, `Connect to Host...`선택 후 `Configrure SSH Hosts...` 선택
 
-![prep_1_21](../assets/images/prep_1_21.png)
-![prep_1_22](../assets/images/prep_1_22.png)
+![Prep_1_21](https://woensug-choi.github.io/ChatGee/assets/images/Prep_1_21.png)
+![Prep_1_22](https://woensug-choi.github.io/ChatGee/assets/images/Prep_1_22.png)
 
 - 제일 상단의 설정파일경로 선택 (운영체제 마다 경로가 상이)해 설정파일 열기
 - 본인의 오라클 서버 `아이피주소`, `다운받은 Key 경로` 입력 (`Host oracle` `User opc`는 공통, `저장필수!!`)
 
-![prep_1_23](../assets/images/prep_1_23.png)
-![prep_1_24](../assets/images/prep_1_24.png)
+![Prep_1_23](https://woensug-choi.github.io/ChatGee/assets/images/Prep_1_23.png)
+![Prep_1_24](https://woensug-choi.github.io/ChatGee/assets/images/Prep_1_24.png)
 
 - 설정파일 저장 후, VSCode 창의 가장 왼쪽 아래 코너의 `><`파란버튼 (Remote SSH 연결 버튼) 클릭, `oracle` 을 클릭하면 오라클 서버에 연결된 새로운 VS Code창이 나타남. 
 - 새로 나타난 창에서 상단에 `Terminal` -> `New Terimal` 클릭
   
-![prep_1_25](../assets/images/prep_1_25.png)
-![prep_1_26](../assets/images/prep_1_26.png)
+![Prep_1_25](https://woensug-choi.github.io/ChatGee/assets/images/Prep_1_25.png)
+![Prep_1_26](https://woensug-choi.github.io/ChatGee/assets/images/Prep_1_26.png)
 
 - 최종적으로 나타나는 VSCode 창은 다음과 같은 모습
 - 왼쪽 아래에 파란버튼에 `oracle` 확인가능
 - 오라클 서버에 접속한 명령어창(Terminal) 확인가능
 
-![prep_1_27](../assets/images/prep_1_27.png)
+![Prep_1_27](https://woensug-choi.github.io/ChatGee/assets/images/Prep_1_27.png)
 
 ### 오라클 클라우드 개발환경 설정
 
