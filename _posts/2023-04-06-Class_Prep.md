@@ -1,5 +1,5 @@
 ---
-title: [기초개발] 워크숍 필수 준비사항
+title: 기초개발 워크숍 필수 준비사항
 author: Woen-Sug Choi
 date: 2023-04-06
 last-modified-at: 2023-04-06
@@ -54,7 +54,7 @@ exclude: true
 - VS Code는 Microsoft에서 개발한 소스코드 편집기
   - 파이썬, 자바스크립트, HTML, CSS 등 다양한 언어를 지원
   - 다양한 플러그인을 설치하여 개발에 유용하게 사용 가능
-  - 📢 [VS Code 다운로드 링크 : code.visualstudio.com/download](https://code.visualstudio.com/download)
+  - <a href="https://code.visualstudio.com/download" target="_blank">📢 VS Code 다운로드 링크 : code.visualstudio.com/download</a>
     - 윈도우면 윈도우 아이콘, 맥은 맥 아이콘을 눌러 설치파일 다운로드
   - 다운로드 후 설치 진행
 
