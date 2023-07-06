@@ -1,5 +1,5 @@
 ---
-title: 워크샾 필수 준비사항
+title: [실전방] 워크샾 필수 준비사항
 author: Woen-Sug Choi
 date: 2023-07-01
 last-modified-at: 2023-07-01
@@ -13,7 +13,7 @@ exclude: true
 > **📢 본 내용을 수행해두지 않으면 워크샾 시간 내 챗봇은 완성할 수 없습니다**
 > 
 > **문의사항은 '워크샾 참여 멤버 오픈톡방'에서 문의해 주시기 바랍니다**
-> - 워크샾 참여멤버 실전방 오픈톡방 : [접속링크](https://open.kakao.com/o/goF68Ssf) (비밀번호 : `chatgee`)
+> - 실전방 워크샾 참여멤버 오픈톡방 : [접속링크](https://open.kakao.com/o/goF68Ssf) (비밀번호 : `chatgee`)
 
 <br>
 
@@ -31,6 +31,8 @@ exclude: true
   - [오라클 클라우드 서버생성](#오라클-클라우드-서버생성)
   - [오라클 클라우드 서버 접속](#오라클-클라우드-서버-접속)
   - [오라클 클라우드 개발환경 설정](#오라클-클라우드-개발환경-설정)
+- [네이버 OpenAPI 설정](#네이버-openapi-설정)
+  - [네이버 개발자 센터 가입 및 로그인](#네이버-개발자-센터-가입-및-로그인)
 
 ## 카카오톡 플러스 채널 생성
 
@@ -313,4 +315,31 @@ exclude: true
     ```bash
     rm Python-3.10.10.tgz
     ```
+
+## 네이버 OpenAPI 설정
+
+### 네이버 개발자 센터 가입 및 로그인
+
+- 네이버 개발자 센터 가입
+  - [https://developers.naver.com/main/](https://developers.naver.com/main/) 접속 후 우측 상단의 `로그인`을 클릭해 네이버 아이디로 로그인합니다.
+
+![naver_1](https://woensug-choi.github.io/ChatGee/assets/images/naver_1.png)
+
+- 어플리케이션 등록
+  - 상단의 `Application`에서 `어플리케이션 등록`을 클릭합니다.
+  - 약관동의 -> 계정 정보 등록 (휴대폰 인증) -> 애플리케이션 등록 절차를 완료합니다.
+  - 마지막 등록하기 단계에서 `사용 API`에 `검색`은 필수로 넣어주시고 추가로 함께 신청해두고 싶은 것을 골라넣어주세요. (추후에도 추가 신청 가능)
+  - `비로그인 오픈 API 서비스 환경` 에서는 `WEB 설정`을 선택하고 `웹 서비스 URL`에 `http://naver.com`을 입력해주세요 (아무거나 입력하는 것이므로 상관없습니다. 네이버 로그인을 사용할 경우에만 중요한 내용입니다.)
+
+![naver_2](https://woensug-choi.github.io/ChatGee/assets/images/naver_2.png)
+
+- 어플리케이션 정보 확인
+  - 등록을 완료하시면 어플리케이션 `Client ID`와 `Client Secret`이 발급됩니다. 이 정보는 추후에 사용할 예정입니다.
+
+![naver_3](https://woensug-choi.github.io/ChatGee/assets/images/naver_3.png)
+
+- 사용량 확인
+  - 어플리케이션 정보 확인 페이지 아래로 스크롤하시면 사용량을 볼수 있는 곳이 있습니다. 검색의 경우 매일 25000건이 무료로 제공됩니다.
+
+![naver_4](https://woensug-choi.github.io/ChatGee/assets/images/naver_4.png)
 
