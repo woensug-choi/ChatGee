@@ -1,5 +1,5 @@
 ---
-title: [실전방] 워크샾 필수 준비사항
+title: [실전개발] 워크숍 필수 준비사항
 author: Woen-Sug Choi
 date: 2023-07-01
 last-modified-at: 2023-07-01
@@ -7,13 +7,13 @@ layout: post
 exclude: true
 ---
 
-워크샾 참여를 환영합니다 🥳🎉
+워크숍 참여를 환영합니다 🥳🎉
 본 페이지는 직접 주소를 입력해 접속해야만 보실 수 있습니다!
 
-> **📢 본 내용을 수행해두지 않으면 워크샾 시간 내 챗봇은 완성할 수 없습니다**
+> **📢 본 내용을 수행해두지 않으면 워크숍 시간 내 챗봇은 완성할 수 없습니다**
 > 
-> **문의사항은 '워크샾 참여 멤버 오픈톡방'에서 문의해 주시기 바랍니다**
-> - 실전방 워크샾 참여멤버 오픈톡방 : [접속링크](https://open.kakao.com/o/goF68Ssf) (비밀번호 : `chatgee`)
+> **문의사항은 '워크숍 참여 멤버 오픈톡방'에서 문의해 주시기 바랍니다**
+> - 실전개발 워크숍 참여멤버 오픈톡방 : [접속링크](https://open.kakao.com/o/goF68Ssf) (비밀번호 : `chatgee`)
 
 <br>
 
@@ -88,7 +88,7 @@ exclude: true
 
 ![fig-9](https://woensug-choi.github.io/ChatGee/assets/images/9.jpg)
 
-- 신청이 완료되면, `챗봇 관리자센터`로 들어가지고 다음과 같은 페이지를 보실 수 있습니다. 여기까지 하시면 워크샾 준비는 끝입니다! 곧 뵙겠습니다!
+- 신청이 완료되면, `챗봇 관리자센터`로 들어가지고 다음과 같은 페이지를 보실 수 있습니다. 여기까지 하시면 워크숍 준비는 끝입니다! 곧 뵙겠습니다!
 
 ![fig-8](https://woensug-choi.github.io/ChatGee/assets/images/8.jpg)
 
@@ -343,3 +343,7 @@ exclude: true
 
 ![naver_4](https://woensug-choi.github.io/ChatGee/assets/images/naver_4.png)
 
+
+<br /><br />
+
+이상 사전준비사항 완료입니다! 수고하셨습니다! 🎉🎉🎉
