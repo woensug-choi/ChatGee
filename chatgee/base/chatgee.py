@@ -6,8 +6,8 @@ ChatGee Module Class Object
 import queue as q
 import threading
 import time
-import requests
 from datetime import datetime
+import requests
 
 import tiktoken
 
@@ -63,7 +63,7 @@ class ChatGeeOBJ:
         if self.callback_option:
             self.callbackUrl = content['userRequest']['callbackUrl']
             callback_flag = True
-            
+
         # Check user
         new_user_flag = False
         userid = content['userRequest']['user']['id'] # userid is saved as 'room' in user_data.db
@@ -117,7 +117,8 @@ class ChatGeeOBJ:
             # If callback respond 'useCallback' as 'true'
             if callback_flag:
                 request_queue = q.Queue()
-                request_respond = threading.Thread(target=self.prompt, args=(request_queue, '', callback_flag))
+                request_respond = threading.Thread(target=self.prompt,
+                                                   args=(request_queue, '', callback_flag))
                 request_respond.start()
                 request_queue.put(content)
                 response = {'version': '2.0', 'useCallback': "true"}
@@ -134,7 +135,8 @@ class ChatGeeOBJ:
                 # trigger the prompt request
                 request_queue.put(content)
                 # Retreive the response
-                while time.time() - start_time < self.ChatGee_Config['SETTINGS']['RESPONSE_SAFE_TIME']:
+                while time.time() - start_time \
+                    < self.ChatGee_Config['SETTINGS']['RESPONSE_SAFE_TIME']:
                     if not response_queue.empty():
                         # Function A returned a result
                         response = response_queue.get()
@@ -178,7 +180,7 @@ class ChatGeeOBJ:
         if callback_flag:
             headers = {'Content-Type': 'application/json; charset=utf-8'}
             result['useCallback'] = True
-            success = requests.post(self.callbackUrl, json=result, headers=headers)
+            requests.post(self.callbackUrl, json=result, headers=headers, timeout=5)
         else:
             response_queue.put(result)
 

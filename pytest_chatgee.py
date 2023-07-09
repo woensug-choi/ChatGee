@@ -31,6 +31,7 @@ def test_prompt(client):
             },
             "userRequest": {
                 "timezone": "Asia/Seoul",
+                "utterance": "hello there?!",
                 "params": {
                 "ignoreMe": "true"
                 },
