@@ -24,6 +24,7 @@ layout: post
     - [채널 연결](#채널-연결)
     - [제너릭 메뉴 설정](#제너릭-메뉴-설정)
     - [챗봇 배포](#챗봇-배포)
+    - [콜백응답 설정](#콜백응답-설정)
 
 ## 플러스 채널 생성
 
@@ -164,3 +165,22 @@ layout: post
 
 ![fig-deploy](https://woensug-choi.github.io/ChatGee/assets/images/deploy.jpg)
 ![fig-deploy-done](https://woensug-choi.github.io/ChatGee/assets/images/deploy_done.jpg)
+
+
+### 콜백응답 설정
+
+- 카카오톡 서버의 5초 내 응답 제한
+  - 카카오톡 서버는 5초안에 챗지서버가 응답을 하지 않으면 연결을 끊어버립니다.
+  - 기본적인 챗지서버의 설정은 응답이 지연되면 `생각 다했니?`를 응답해 사용자가 백그라운드에서 저장된 응답을 받을 수 있도록 구성되어 있습니다.
+- 카카오톡 콜백응답 기능
+  - 5초 이후에 응답을 보내는 기능이 `콜백응답`기능입니다. 해당 기능은 카카오톡측에 직접 메일을 보내 승인을 받아야 합니다.
+  - 숨겨진 Callback API 문서 : <a href="https://i.kakao.com/docs/skill-callback-dev-guide" target="_blank">https://i.kakao.com/docs/skill-callback-dev-guide</a>
+  > Callback API 사용을 위해서는 챗봇관리자센터에 등록된 챗봇을 AI 챗봇으로 전환해야 합니다. 전환을 원하시는 경우, 이메일을 통해서 전환 신청 해주시기 바랍니다.
+  > - botbiz@kakaocorp.com
+  > - 제목과 간단한 서비스 소개
+  > - 봇ID
+  - 승인에 추가적으로 몇일이 소요되며, 승인 후 콜백기능을 설정할 수 있습니다.
+
+- 콜백 승인 후 `챗봇 관리자센터`의 `시나리오`의 `폴백플롯`에서 우상단의 `초기화`버튼 옆 ...버튼에 `Callback 설정`이 옵션이 생성되어 있습니다. 여기서 On으로 설정 후 저장하고 배포하시면됩니다. Callback 기능은 최근에 추가된 기능이어서 `챗봇 관리자센터`에서 테스트가 불가능하고 배포 후 직접 카카오톡을 통해서만 구동 가능합니다.
+
+![callback-setting](https://woensug-choi.github.io/ChatGee/assets/images/callback-setting-option.jpg)
