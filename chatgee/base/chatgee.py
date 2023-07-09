@@ -6,6 +6,7 @@ ChatGee Module Class Object
 import queue as q
 import threading
 import time
+import requests
 from datetime import datetime
 
 import tiktoken
@@ -40,6 +41,9 @@ class ChatGeeOBJ:
             system_prompt_tokens_estimate = self.system_prompt_tokens_estimate,
             openai_api_error_log = self.ChatGee_Config['OPEN_AI']['OPENAI_API_ERROR_LOG']
         )
+        # CallbackOptionFlag
+        self.callback_option = self.ChatGee_Config['SETTINGS']['CALLBACK']
+        self.callbackUrl = ''
 
     # Get Usage Count
     def get_usage_count(self, userid):
@@ -54,6 +58,12 @@ class ChatGeeOBJ:
         run_flag = False
         start_time = time.time()
 
+        # Get CallbackUrl from Kakaotalk Request
+        callback_flag = False
+        if self.callback_option:
+            self.callbackUrl = content['userRequest']['callbackUrl']
+            callback_flag = True
+            
         # Check user
         new_user_flag = False
         userid = content['userRequest']['user']['id'] # userid is saved as 'room' in user_data.db
@@ -104,39 +114,48 @@ class ChatGeeOBJ:
 
         # Run if no special commands found
         if run_flag:
-            # Make queues for request and respond
-            request_queue = q.Queue()
-            response_queue = q.Queue()
-            # assign target function for the queues
-            request_respond = threading.Thread(target=self.prompt,
-                                               args=(request_queue, response_queue))
-            # start the queues
-            request_respond.start()
-            # trigger the prompt request
-            request_queue.put(content)
-            # Retreive the response
-            while time.time() - start_time < self.ChatGee_Config['SETTINGS']['RESPONSE_SAFE_TIME']:
-                if not response_queue.empty():
-                    # Function A returned a result
-                    response = response_queue.get()
-                    break
-                timeover_queue = q.Queue()
-                timeover_thread = threading.Thread(target=self.timeover, args=(timeover_queue,))
-                timeover_thread.start()
-                response = timeover_queue.get()
+            # If callback respond 'useCallback' as 'true'
+            if callback_flag:
+                request_queue = q.Queue()
+                request_respond = threading.Thread(target=self.prompt, args=(request_queue, '', callback_flag))
+                request_respond.start()
+                request_queue.put(content)
+                response = {'version': '2.0', 'useCallback': "true"}
+            # If not response "생각 다 했니" option if response is delayed
+            else:
+                # Make queues for request and respond
+                request_queue = q.Queue()
+                response_queue = q.Queue()
+                # assign target function for the queues
+                request_respond = threading.Thread(target=self.prompt,
+                                    args=(request_queue, response_queue, callback_flag))
+                # start the queues
+                request_respond.start()
+                # trigger the prompt request
+                request_queue.put(content)
+                # Retreive the response
+                while time.time() - start_time < self.ChatGee_Config['SETTINGS']['RESPONSE_SAFE_TIME']:
+                    if not response_queue.empty():
+                        # Function A returned a result
+                        response = response_queue.get()
+                        break
+                    timeover_queue = q.Queue()
+                    timeover_thread = threading.Thread(target=self.timeover, args=(timeover_queue,))
+                    timeover_thread.start()
+                    response = timeover_queue.get()
 
-                # For safety
-                time.sleep(0.01)
+                    # For safety
+                    time.sleep(0.01)
 
-            if user_data[4] % self.ChatGee_Config['SETTINGS']['ADVERTISEMENT_FREQUENCY'] == 0 \
-                and content['userRequest']['utterance'] != '생각 다 했니???!':
-                response = generate_advertisement(self.ChatGee_Config, response)
+                if user_data[4] % self.ChatGee_Config['SETTINGS']['ADVERTISEMENT_FREQUENCY'] == 0 \
+                    and content['userRequest']['utterance'] != '생각 다 했니???!':
+                    response = generate_advertisement(self.ChatGee_Config, response)
 
         # Return back to kakao
         return response
 
     # ----- Main Action Wrapper Function ----- #
-    def prompt(self, request_queue, response_queue):
+    def prompt(self, request_queue, response_queue, callback_flag):
         """Process the prompt received from Flask"""
         content = request_queue.get()
         userid = content['userRequest']['user']['id']
@@ -155,7 +174,13 @@ class ChatGeeOBJ:
         chat_gpt_respond.join()
         result = child_queue.get()
 
-        response_queue.put(result)
+        # Callback deviation
+        if callback_flag:
+            headers = {'Content-Type': 'application/json; charset=utf-8'}
+            result['useCallback'] = True
+            success = requests.post(self.callbackUrl, json=result, headers=headers)
+        else:
+            response_queue.put(result)
 
     # ----- Get ChatGPT Respond Function ----- #
     def respond(self, queue, content, userid):

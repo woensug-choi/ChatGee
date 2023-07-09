@@ -45,7 +45,7 @@ def usage_count(userid):
         'labels': ['Usage Count'],
         'datasets': [{
             'label': 'Usage Count',
-            'backgroundColor': 'rgba(255, 20, 147, 0.2)', 
+            'backgroundColor': 'rgba(255, 20, 147, 0.2)',
             'borderColor': 'rgba(255, 99, 132, 1)',
             'borderWidth': 1,
             'data': [usage_count_no],
