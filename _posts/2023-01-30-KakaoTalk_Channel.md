@@ -183,4 +183,4 @@ layout: post
 
 - 콜백 승인 후 `챗봇 관리자센터`의 `시나리오`의 `폴백플롯`에서 우상단의 `초기화`버튼 옆 ...버튼에 `Callback 설정`이 옵션이 생성되어 있습니다. 여기서 On으로 설정 후 저장하고 배포하시면됩니다. Callback 기능은 최근에 추가된 기능이어서 `챗봇 관리자센터`에서 테스트가 불가능하고 배포 후 직접 카카오톡을 통해서만 구동 가능합니다.
 
-![callback-setting](https://woensug-choi.github.io/ChatGee/assets/images/callback-setting-option.jpg)
+![callback-setting](https://woensug-choi.github.io/ChatGee/assets/images/callback-setting-option.png)

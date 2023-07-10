@@ -175,7 +175,7 @@ layout: post
   - 기본적인 챗지서버의 설정은 응답이 지연되면 `생각 다했니?`를 응답해 사용자가 백그라운드에서 저장된 응답을 받을 수 있도록 구성되어 있습니다.
 - 카카오톡 콜백응답 기능
   - 5초 이후에 응답을 보내는 기능이 `콜백응답`기능입니다. 해당 기능은 카카오톡측에 직접 메일을 보내 승인을 받아야 합니다.
-  - 콜백기능을 활성화 하시려면 [콜백응답 설정](ttps://woensug-choi.github.io/ChatGee/KakaoTalk_Channel.html#콜백응답-설정)을 먼저 수행하시기 바랍니다.
+  - 콜백기능을 활성화 하시려면 [콜백응답 설정](https://woensug-choi.github.io/ChatGee/KakaoTalk_Channel.html#콜백응답-설정)을 먼저 수행하시기 바랍니다.
 - 콜백기능을 활성화 하셨다면,
   - `settings.yaml > SETTINGS > CALLBACK` 를 `True`로 변경합니다.
 
