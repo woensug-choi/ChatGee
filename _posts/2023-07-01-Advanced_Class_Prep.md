@@ -21,6 +21,7 @@ exclude: true
 
 - [목차](#목차)
 - [필요 프로그램 설치](#필요-프로그램-설치)
+  - [리눅스 환경 구성](#리눅스-환경-구성)
   - [파이썬 3.10 설치](#파이썬-310-설치)
   - [VSCode 설치](#vscode-설치)
 - [카카오톡 플러스 채널 생성](#카카오톡-플러스-채널-생성)
@@ -41,14 +42,21 @@ exclude: true
     - [어플리케이션 정보 확인](#어플리케이션-정보-확인)
     - [사용량 확인](#사용량-확인)
 
-
-
 ## 필요 프로그램 설치
+
+### 리눅스 환경 구성
+
+- 애플 컴퓨터
+  - 애플컴퓨터는 이미 리눅스 환경입니다. 별도의 설치는 필요하지 않습니다.
+- 윈도우 컴퓨터
+  - [윈도우 컴퓨터 리눅스 환경구성 방법 매뉴얼 링크](https://woensug-choi.github.io/jump-to-ros-gazebo/jekyll/Start.html#%EB%A6%AC%EB%88%85%EC%8A%A4-%ED%99%98%EA%B2%BD-%EA%B5%AC%EC%84%B1-%EB%B0%A9%EB%B2%95)
+    - 윈도우 터미널 설치도 권장합니다. [윈도우 터미널 링크](https://apps.microsoft.com/store/detail/windows-terminal/9N0DX20HK701)
 
 ### 파이썬 3.10 설치
 
 - 공식 파이썬 3.10.10 다운로드 링크
   - 맥버전 : [다운로드 링크](https://www.python.org/ftp/python/3.10.10/python-3.10.10-macos11.pkg)
+  - 리눅스 : Ubuntu 22.04로 설치됬다면 이미 파이썬 3.10이 설치되어 있음
   - 윈도우 : [다운로드 링크](https://www.python.org/ftp/python/3.10.10/python-3.10.10-amd64.exe)
     - 📢📢 윈도우 주의사항!! 아래 스크린샷과 같이 아래 `Add python.exe to PATH` 클릭 필수!
     - ADD PATH는 파이썬이 어느곳에서든지 실행되도록 설정하는 내용
@@ -56,7 +64,7 @@ exclude: true
       <img src="https://woensug-choi.github.io/ChatGee_Doc/assets/images/python1.jpg" style="height:270px;">
 
 - 설치확인
-  - 맥
+  - 맥 & 리눅스
     - `Terminal`앱을 실행시키고 `python --version`을 입력하여 파이썬 버전 3.10.10 확인
   - 윈도우
     - 윈도우 시작버튼을 누른 후 `cmd`를 검색해서 검은 창을 실행하고 `python --version`을 입력하여 파이썬 버전 3.10.10 확인
