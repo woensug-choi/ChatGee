@@ -232,6 +232,7 @@ exclude: true
 ![Prep_1_15-2](https://woensug-choi.github.io/ChatGee/assets/images/Prep_1_15-2.png)
 
 - `Ampere` 타입 선택 후 `Standard.A1.Flex`를 체크합니다.
+  - ARM인스턴스 생성이 안되어 Standard E2.1.Micro라고 하는 일반 형태를 고르셨다면 운영체제는 Ubuntu 20.04를 선택합니다.
 
 ![Prep_1_15-3](https://woensug-choi.github.io/ChatGee/assets/images/Prep_1_15-3.png)
 
