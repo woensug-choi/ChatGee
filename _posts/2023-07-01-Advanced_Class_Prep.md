@@ -324,7 +324,7 @@ exclude: true
 
   - 6 : 파이썬 소스코드 설치환경 설정
     ```bash
-    sudo ./configure --enable-optimizations
+    ./configure --enable-optimizations --enable-loadable-sqlite-extensions
     ```
 
   - 7 : CPU4개를 이용해 컴파일 (약 10분 소요됩니다), 코어가 한개라면 마지막 숫자를 `1`로 변경
