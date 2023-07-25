@@ -223,7 +223,7 @@ exclude: true
 
 - `이미지 및 구성` 항목의 `편집`을 클릭합니다.
 - 기본 `평생무료` 이미지는 Standard E2.1.Micro라고 하는 일반 CPU의 코어 1개로 되어있습니다. 코어 1개는 아무래도 사용성이 떨어지니 새로 나온 ARM기반의 CPU 4개짜리로 변경하려합니다.
-  - 이부분에서, CPU 4개짜리 ARM 인스턴스는 인기가 많아 마지막에 생성이 안되는 경우가 있습니다. 그런경우 다른 시간에 여러번 시도해서 뚫어놓으시면 좋습니다. 정말 안된다면, 기존의 Standard E2.1.Micro로 생성해 주시기 바랍니다. 다음 페이지에 이어서  CPU 4개짜리 ARM 설정방법을 설명합니다.
+  - 이부분에서, CPU 4개짜리 ARM 인스턴스도 `평생무료` 이며 인기가 많아 마지막에 생성이 잘 안됩니다. 그런경우 다른 시간에 여러번 시도해서 뚫어놓으시면 좋습니다. 정말 안된다면, 맨 오른쪽 탭의 `특수성 및 이전 세대`에서 `VM.Standard E2.2`를 선택해 주시기 바랍니다. 해당모델은 월 5만원정도 소모됩니다만 처음 가입하셨으면 200 달러가 충전되어 있으므로, 약 3개월정도 테스트 가능합니다.
 
 ![Prep_1_15-1](https://woensug-choi.github.io/ChatGee/assets/images/Prep_1_15-1.png)
 
@@ -277,6 +277,13 @@ exclude: true
 
 - 제일 상단의 설정파일경로 선택 (운영체제 마다 경로가 상이)해 설정파일 열기
 - 본인의 오라클 서버 `아이피주소`, `다운받은 Key 경로` 입력 (`Host oracle` `User opc`는 공통, `저장필수!!`)
+
+  ```config
+  HOST oracle # 이름 원하는대로 변경가능
+      HostName 000.00.000.00 # 본인 오라클 아이피주소
+      User opc # 공통
+      IdentityFile ~/Downloads/ssh-key-2023-00-00.key #본인의 다운받은 Key 경로
+  ```
 
 ![Prep_1_23](https://woensug-choi.github.io/ChatGee/assets/images/Prep_1_23.png)
 ![Prep_1_24](https://woensug-choi.github.io/ChatGee/assets/images/Prep_1_24.png)
