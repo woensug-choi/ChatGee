@@ -284,11 +284,13 @@ exclude: true
       User opc # 공통
       IdentityFile ~/Downloads/ssh-key-2023-00-00.key #본인의 다운받은 Key 경로
   ```
+  - 한글로 '다운로드' 폴더라도 실제 경로명은 ~/Downloads 입니다.
 
 ![Prep_1_23](https://woensug-choi.github.io/ChatGee/assets/images/Prep_1_23.png)
 ![Prep_1_24](https://woensug-choi.github.io/ChatGee/assets/images/Prep_1_24.png)
 
 - 설정파일 저장 후, VSCode 창의 가장 왼쪽 아래 코너의 `><`파란버튼 (Remote SSH 연결 버튼) 클릭, `oracle` 을 클릭하면 오라클 서버에 연결된 새로운 VS Code창이 나타남. 
+  - 플랫폼을 물어본다면 `Linux` 선택
 - 새로 나타난 창에서 상단에 `Terminal` -> `New Terimal` 클릭
   
 ![Prep_1_25](https://woensug-choi.github.io/ChatGee/assets/images/Prep_1_25.png)
