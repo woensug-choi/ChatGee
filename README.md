@@ -8,6 +8,9 @@ permalink: /
 
 사용설명서 바로가기 : [📖ChatGee 사용설명서](https://woensug-choi.github.io/ChatGee/Introduction.html)
 
+오프라인 워크숍 바로가기 :
+[AI 챗봇 개발 워크숍](https://synapply.com/workshop)
+
 소스코드 바로가기 :
 [ChatGee 소스코드](https://github.com/woensug-choi/ChatGee)
 
