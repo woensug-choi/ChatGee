@@ -161,26 +161,23 @@ class ChatGeeOBJ:
         """Process the prompt received from Flask"""
         content = request_queue.get()
         userid = content['userRequest']['user']['id']
-        content = content['userRequest']['utterance']
-        content = ''.join(str(e) for e in content)
-
+        content_text = content['userRequest']['utterance']
+        content_text = ''.join(str(e) for e in content_text)
         # run queue threading since kakaotalk chatbot will only wait 5 seconds
         child_queue = q.Queue()
-
         # create the thread
         chat_gpt_respond = threading.Thread(target=self.respond,
-                                            args=(child_queue, content, userid))
-
+                                            args=(child_queue, content_text, userid))
         # Start the thread
         chat_gpt_respond.start()
         chat_gpt_respond.join()
         result = child_queue.get()
-
         # Callback deviation
         if callback_flag:
             headers = {'Content-Type': 'application/json; charset=utf-8'}
             result['useCallback'] = True
-            requests.post(self.callbackUrl, json=result, headers=headers, timeout=5)
+            requests.post(content['userRequest']['callbackUrl'], json=result,
+                          headers=headers, timeout=5)
         else:
             response_queue.put(result)
 
