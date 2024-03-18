@@ -21,6 +21,18 @@ layout: post
 
 # 챗지 활용 예시
 
+## OPENAI API 대신 로컬 PC에서 비용 부담 없이 이용하는 방법
+
+olabi님의 원글 링크 : [https://github.com/olabi/ChatGee/wiki](https://github.com/olabi/ChatGee/wiki)
+
+챗지 Release 0.11.1, LM Studio 0.2.16 버전을 기준으로 테스트되었습니다.
+
+[LM Studio] 설치 : https://lmstudio.ai/
+LM Studio에서 Gemma, Mistral, Phi, Llama, llava, Solar 등 다양한 모델 검색하여 다운로드 및 사용 가능(단, GPU VRAM 용량에 따라 제한)
+
+챗지빌더를 통해 로컬 언어모델과 카카오톡을 연동합니다.
+
+
 ## 시놀로지 NAS에 챗지 서버 설치하기
 
 고종훈님 원글 링크 : [https://www.chatgpters.org/c/ai-developers/nas](https://www.chatgpters.org/c/ai-developers/nas)
