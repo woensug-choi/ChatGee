@@ -2,7 +2,7 @@
 title: 챗지 활용 예시
 author: Woen-Sug Choi
 date: 2023-03-28
-last-modified-at: 2023-04-23
+last-modified-at: 2024-03-18
 layout: post
 ---
 
@@ -16,6 +16,7 @@ layout: post
 
 - [목차](#목차)
 - [챗지 활용 예시](#챗지-활용-예시)
+  - [OPENAI API 대신 로컬 PC에서 비용 부담 없이 이용하는 방법](#OPENAI-API-대신-로컬-PC에서-비용-부담-없이-이용하는-방법)
   - [시놀로지 NAS에 챗지 서버 설치하기](#시놀로지-nas에-챗지-서버-설치하기)
     - [시놀로지 NAS에 설치방법](#시놀로지-nas에-설치방법)
 
