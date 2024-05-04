@@ -8,8 +8,15 @@ permalink: /
 
 사용설명서 바로가기 : [📖ChatGee 사용설명서](https://woensug-choi.github.io/ChatGee/Introduction.html)
 
+오프라인 워크숍 바로가기 :
+[AI 챗봇 개발 워크숍](https://synapply.com/workshop)
+
 소스코드 바로가기 :
 [ChatGee 소스코드](https://github.com/woensug-choi/ChatGee)
+
+클라우드 서비스 :
+[ChatGee.ai](https://www.chatgee.ai/)
+이 모든걸 클릭만으로! 무료로!
 
 > * 문의사항은 [Github의 Issues](https://github.com/woensug-choi/ChatGee/issues)를 이용해 주시기 바랍니다.
 > * 최상의 가독성을 위해 데스크탑 환경에서 [Chrome](https://www.google.com/chrome/) 또는 [Edge](https://www.microsoft.com/edge) 사용을 권장합니다.

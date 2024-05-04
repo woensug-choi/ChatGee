@@ -2,7 +2,7 @@
 title: 챗지 활용 예시
 author: Woen-Sug Choi
 date: 2023-03-28
-last-modified-at: 2023-04-23
+last-modified-at: 2024-03-18
 layout: post
 ---
 
@@ -16,10 +16,23 @@ layout: post
 
 - [목차](#목차)
 - [챗지 활용 예시](#챗지-활용-예시)
+  - [OPENAI API 대신 로컬 PC에서 비용 부담 없이 이용하는 방법](#OPENAI-API-대신-로컬-PC에서-비용-부담-없이-이용하는-방법)
   - [시놀로지 NAS에 챗지 서버 설치하기](#시놀로지-nas에-챗지-서버-설치하기)
     - [시놀로지 NAS에 설치방법](#시놀로지-nas에-설치방법)
 
 # 챗지 활용 예시
+
+## OPENAI API 대신 로컬 PC에서 비용 부담 없이 이용하는 방법
+
+olabi님의 원글 링크 : [https://github.com/olabi/ChatGee/wiki](https://github.com/olabi/ChatGee/wiki)
+
+챗지 Release 0.11.1, LM Studio 0.2.16 버전을 기준으로 테스트되었습니다.
+
+[LM Studio] 설치 : https://lmstudio.ai/
+LM Studio에서 Gemma, Mistral, Phi, Llama, llava, Solar 등 다양한 모델 검색하여 다운로드 및 사용 가능(단, GPU VRAM 용량에 따라 제한)
+
+챗지빌더를 통해 로컬 언어모델과 카카오톡을 연동합니다.
+
 
 ## 시놀로지 NAS에 챗지 서버 설치하기
 
