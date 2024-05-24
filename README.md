@@ -12,11 +12,16 @@
   - 5초 내 응답하지 못하면 '생각중'이라는 답을 우선 송신
   - 사용자가 다시 요청 시, DB에 저장된 답변을 송신
 - ChatGPTers의 AI 챗봇 개발실과 함께합니다
-  - [AI 챗봇 개발실 (ChatGPTers)](https://open.kakao.com/o/gECQhjbf)
+  - [AI 챗봇 개발실 (ChatGPT)](https://open.kakao.com/o/gECQhjbf)
 
 # 📖 ChatGee 사용설명서
 
 사용설명서 바로가기 : [📖 ChatGee 사용설명서](https://woensug-choi.github.io/ChatGee)
+
+
+# ☁️ 클라우드버전 ChatGee.ai : 직접 설치하거나 코드를 수정하지 않고 간단히 또는 노코드로 AI 카카오톡 챗봇을 만들 수 있습니다.
+
+[🚀ChatGee.ai](https://chatgee.ai)
 
 
 
