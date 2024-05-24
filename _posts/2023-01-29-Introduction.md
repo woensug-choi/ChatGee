@@ -2,7 +2,7 @@
 title: 챗봇빌더 사용설명서
 author: Woen-Sug Choi
 date: 2023-03-28
-last-modified-at: 2023-04-23
+last-modified-at: 2024-05-23
 layout: post
 ---
 
@@ -13,6 +13,9 @@ layout: post
 오프라인 워크숍 바로가기 :
 [AI 챗봇 개발 워크숍](https://synapply.com/workshop)
 
+클라우드 AI 카카오톡 챗봇 :
+[ChatGee.ai](https://chatgee.ai)를 이용하시면 간단히 나만의 카카오톡 AI 챗봇을 만들어보실 수 있습니다
+
 - **챗지 챗봇의 성격, 역할, 내용을 프롬프트로 직접 디자인 가능🎉🎉**
 - **내용 기입, 실행파일 실행, 챗봇 설정만으로 코딩 몰라도 가능🎉🎉**
 - 기본 포함기능
@@ -22,11 +25,9 @@ layout: post
   - 5초 내 응답하지 못하면 '생각중'이라는 답을 우선 송신
   - 사용자가 다시 요청 시, DB에 저장된 답변을 송신
 - ChatGPTers의 AI 챗봇 개발실과 함께합니다
-  - [AI 챗봇 개발실 (ChatGPTers)](https://open.kakao.com/o/gECQhjbf)
+  - [AI 챗봇 개발실 (GPTers)](https://open.kakao.com/o/gECQhjbf)
 
-> 카카오톡 챗봇 등록에 시간이 최대 6일 소요됩니다. [채널 신설과 챗봇 등록](https://woensug-choi.github.io/ChatGee/KakaoTalk_Channel.html)을 우선 수행해 두시기 바랍니다!
-
-> 5초 후 응답하려면 '광고'의 성격을 가지므로 15원이 소모
+> 카카오톡 AI챗봇 활성화에 최대 3일 정도 소요됩니다. [채널 신설과 챗봇 등록](https://woensug-choi.github.io/ChatGee/KakaoTalk_Channel.html)을 우선 수행해 두시기 바랍니다! 최신버전의 설명서는 [ChatGee.ai 카카오톡 챗봇연동](https://doc-kr.chatgee.ai/3fd4a3822d244635847db45526b10fa5)을 참고해 주시기 바랍니다.
 
 # 개발 예제
 
